@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {%load static%}
+	<!---->
+	<meta charset="UTF-8">
+	<!--Meta para trabajar con dispositivos moviles-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#222">
+
+	<!--ICONO-->
+	<link rel="shortcut icon" href="/media/core/ico.ico" />
+	<!--BOOTSTRAP 4-->
+	<link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+	<!--MIS ESTILOS BASE-->
+	<link rel="stylesheet" href="{% static 'core/css/estilos_base.css' %}">
+	<!--ICONOS-->
+	<link href="https://file.myfontastic.com/c6bMe6q2EX423WrAAL4UwC/icons.css" rel="stylesheet">
+
+	<!--LIGHTBOX-->
+	<link rel="stylesheet" href="{% static 'core/css/lightbox.css' %}">
+
+	<!--AOS-->
+	<link rel="stylesheet" href="{% static 'core/css/aos.css' %}">
+
+	<!--Plugin Scrollup-->
+	<link rel="stylesheet" href="{% static 'core/css/scrollUp.css' %}">
+
+	<!--MIS ESTILOS DETALLES-->
+	<link rel="stylesheet" href="{% static 'core/css/estilos_detalles.css' %}">
+
+	<title>{%block title%}{%endblock%}</title>
+</head>
+<body>
+	<div class="loader"></div>
+    <div class="container-fluid p-0">
+        <!--HEADER-->
+        {%include 'core/header.html'%}
+        <!--FIN HEADER-->
+
+		<!--CONTENT-->
+        {%block content%}{%endblock%}
+		<!--FIN CONTENT-->
+
+        <!--FOOTER-->
+        {%include 'core/footer.html'%}
+        <!--FIN FOOTER-->
+    </div>
+
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<!--POPPERS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+	<!--BOOTSTRAP 4-->
+	<script src="{% static 'core/js/bootstrap.js' %}"></script>
+
+	<!--LIGHTBOX-->
+	<script src="{% static 'core/js/lightbox.js' %}"></script>
+
+	<!--AOS-->
+	<script src="{% static 'core/js/aos.js' %}"></script>
+
+	<!--SCROLLUP-->
+	<script src="{% static 'core/js/scrollUp.js' %}"></script>
+
+	<!--INICIALIZACION DE COMPONENTES DE JS-->
+	<script src="{% static 'core/js/componentes.js' %}"></script>
+
+	<!--VALIDACIONES-->
+	<script src="{% static 'core/js/validaciones.js' %}"></script>
+
+
+	</body>
+</html>

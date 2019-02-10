@@ -1,0 +1,49 @@
+{%extends 'core/base.html'%}
+{%block title%}Actualizar Lista de Compras{%endblock%}
+{%block content%}
+<div class="container shadow container-whithe">
+	<div class="row">
+		<div class="col-12 text-center mt-4 mb-4">
+			<h1>Actualizar lista</h1>
+		</div>
+		<div class="col-12">
+			<form method="post" class="form-row justify-content-center" onsubmit="return validar_ldc();">
+				{% csrf_token %}
+				<div class="col-12 col-sm-5 form-group">
+					{{form.nombre.label}}
+					{{form.nombre}}
+					<div class="invalid-feedback">
+                        <p id="id_nombre-invalid" class="m-0"></p>
+                    </div>
+                    <div class="valid-feedback">
+                        <p id="id_nombre-valid" class="m-0">Correcto</p>
+                    </div>
+				</div>
+
+				<div class="w-100"></div>
+
+				<div class="col-12 col-sm-5 form-group">
+					{{form.local.label}}
+					{{form.local}}
+					{{form.usuario}}
+					<div class="invalid-feedback">
+                        <p id="id_local-invalid" class="m-0"></p>
+                   </div>
+                   <div class="valid-feedback">
+                        <p id="id_local-valid" class="m-0">Correcto</p>
+                   </div>
+				</div>
+
+				<div class="w-100"></div>
+
+				<div class="col-12 col-sm-5 form-group text-center mt-5">
+					<button type="submit" class="btn btn-primary"><span data-icon="u"></span> Actualizar</button>
+				</div>
+			</form>
+		</div>
+		<div class="col-12  m-4">
+			<a href="{%url 'lista_compra:list_ldc'%}" class="btn btn-secondary "><span data-icon="x"></span> Volver</a>
+		</div>
+	</div>
+</div>
+{%endblock%}

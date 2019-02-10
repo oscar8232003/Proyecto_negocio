@@ -1,0 +1,45 @@
+{%extends 'core/base.html'%}
+{%block content%}
+<div class="container shadow container-whithe">
+    {%if not request.user.is_authenticated %}
+     <form action="" method="post" class="row justify-content-center pt-5 pb-5">
+     {% csrf_token %}
+         <div class="col-12 text-center pt-5">
+             <h3 class="m-4"><strong>Iniciar sesión</strong></h3>
+         </div>
+
+      {% if form.non_field_errors %}
+         <!--ALERTS-->
+         <div class="col-12 text-center col-sm-6">
+             <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <h6>Usuario o contraseña incorrectos, prueba de nuevo</h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+         <div class="w-100"></div>
+         <!--FIN ALERTS-->
+      {% endif %}
+
+        <div class="col-12 col-sm-5 form-group">
+            <input type="text" name="username" autofocus maxlength="254" required id="id_username" class="form-control" placeholder="Nombre de usuario"/>
+        </div>
+         <div class="w-100"></div>
+         <div class="col-12 col-sm-5 form-group">
+            <input type="password" name="password" required id="id_password" class="form-control" placeholder="Contraseña"/>
+         </div>
+        <div class="w-100"></div>
+         <div class="col-12 col-sm-5 form-group m-4 pb-5">
+            <input type="submit" class="btn btn-primary btn-block" value="Ingresar">
+         </div>
+    </form>
+    {%else%}
+    <div class="row">
+        <div class="col-12 text-center p-5">
+            <h3>Ya estas logeado, <a href="{%url 'core:index'%}">Haz click aqui para ir al index</a></h3>
+        </div>
+    </div>
+    {%endif%}
+</div>
+{%endblock%}

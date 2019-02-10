@@ -1,0 +1,10 @@
+{%extends 'core/base.html'%}
+{%block content%}
+
+ <form action="" method="post">
+     {% csrf_token %}
+      <h3 class="mb-4">Registro</h3>
+        {{form.as_p}}
+      <p><input type="submit" class="btn btn-primary btn-block" value="Registrarse"></p>
+    </form>
+{%endblock%}

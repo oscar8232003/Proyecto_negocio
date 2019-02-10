@@ -1,0 +1,23 @@
+{%extends 'core/base.html'%}
+{%block title%}Eliminar Lista de Compras{%endblock%}
+{%block content%}
+<div class="container shadow container-whithe">
+    <div class="row">
+        <div class="col-12">
+           <h1>Estas seguro de que quieres eliminar "{{ldc.nombre}}"</h1>
+        </div>
+        <div class="col-12 text-center">
+            <form action="" method="POST">
+                {%csrf_token%}
+                <input type="submit" name="confirmacion" value="Si, la quiero borrar" class="btn btn-danger" >
+            </form>
+        </div>
+        <div class="col-12 m-4">
+            <a href="{%url 'lista_compra:list_ldc'%}" class="btn btn-secondary "><span data-icon="x"></span> Volver</a>
+        </div>
+    </div>
+
+</div>
+
+
+{%endblock%}

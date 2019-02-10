@@ -1,0 +1,119 @@
+		/*------------------------------Fuente------------------------------*/
+		@font-face {
+        font-family: "William";
+        src: url(/static/core/fonts/Willian.ttf) format("truetype");
+        }
+
+        @font-face {
+        font-family: "Caviardreams";
+        src: url(/static/core/fonts/Caviardreams.ttf) format("truetype");
+        }
+		/*------------------------------Fuente------------------------------*/
+
+
+		/*------------------------------TOP------------------------------*/
+
+		
+		.BACKGROUND-TOP{
+			background-color: #000000;
+		}
+		
+		.top-a{
+			transition: all 0.5s;
+		}
+
+		.top-a:hover{
+			color:#cafdca;
+		}
+
+		/*------------------------------END TOP------------------------------*/
+		
+
+		/*------------------------------NAVBAR------------------------------*/
+		.TITULO{
+		font-family: "William";
+		font-size:2.5rem;
+		}
+
+		.barra_navbar{
+			background-color:#222;
+		}
+
+		.LOGIN{
+			color: #fff;
+			transition: all 1s;
+		}
+
+		.LOGUEADO{
+		    font-size: 1.2rem;
+		}
+		
+		.LOGIN:hover{
+			transform: scale(1.05);
+			text-decoration: none;
+			color: #fff;
+		}
+		
+		.span-navbar{
+			color:rgb(72, 184, 208);
+		}
+		/*------------------------------END NAVBAR------------------------------*/
+	
+		/*------------------------------END HEADER------------------------------*/
+		
+		/*------------------------------FOOTER------------------------------*/
+		footer{
+			background-color: #222;
+			color:white;
+		}
+		
+		.lista{
+			list-style: none;
+			padding-left: 0px;
+			margin-bottom: 0px;
+		}
+
+		.lista li{
+			display: inline-block;
+		}
+		.lista li a{
+			display: block;
+			text-decoration: none;
+			color:white;
+			margin-right: 10px;
+		}
+
+		.lista li a h6{
+			margin-bottom:0px; 
+			color: #fff;
+		}
+
+		.CATEGORIAS_FOOTER{
+		font-size:1.1rem;
+		color: #fff;
+		}
+
+		.CATEGORIAS_FOOTER:hover{
+        text-decoration: none;
+		color: #fff;
+		}
+
+		/*------------------------------ END FOOTER------------------------------*/
+
+
+
+         /*------------------------------ LISTAR------------------------------*/
+
+        .productos_listar{
+        transition:all 1s;
+        }
+        .productos_listar:hover{
+        transform:scale(1.05);
+        }
+        /*------------------------------ END LISTAR------------------------------*/
+
+
+
+        /*------------------------------ MEDIA QUERIES------------------------------*/
+
+		/*------------------------------ END MEDIA QUERIES------------------------------*/

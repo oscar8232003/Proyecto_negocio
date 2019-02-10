@@ -1,0 +1,104 @@
+{%extends 'core/base.html'%}
+{%block title%}Detalle de {{ldc.nombre}}{%endblock%}
+{%block content%}
+<div class="container shadow container-whithe">
+    <div class="row">
+        <div class="col-12 text-center p-4">
+            <h1 class="mb-3">{{ldc.nombre}}</h1>
+            <h4 ><em>{%if productos.exists%}Con un total estimado de ${{ldc.total_lista}} {%endif%}</em></h4>
+            <hr>
+        </div>
+        <div class="col-12 mb-4">
+            <a href="{%url 'lista_compra:agregar_pc' ldc.id%}" class="btn btn-success"><span data-icon="v"></span> Agregar Producto a la lista</a>
+        </div>
+
+        <!--ALERTS-->
+        {%if request.GET.msg == 'crear_pc_ok'%}
+        <div class="col-12 text-center">
+             <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <h6 style="color: rgb(33, 95, 30);"><strong>Producto agregado a la lista exitosamente</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%elif request.GET.msg == 'upd_pc_ok'%}
+        <div class="col-12 text-center">
+             <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <h6 style="color: rgb(33, 95, 30);"><strong>Producto Actualizado exitosamente</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%elif request.GET.msg == 'eli_pc_ok'%}
+        <div class="col-12 text-center">
+             <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <h6 style="color: rgb(33, 95, 30);"><strong>Producto eliminado de la lista exitosamente</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%elif request.GET.msg == 'upd_pc_error'%}
+        <div class="col-12 text-center">
+             <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <h6 style="color: #dc3545;"><strong>El producto no pudo actualizarse, intentelo de nuevo mas tarde.</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%endif%}
+        <!--FIN ALERTS-->
+
+    </div>
+        {%if productos.exists%}
+
+    <form method="POST" class="row p-sm-4 p-3 m-sm-4 m-1 fondo_ldc">
+        <div class="col-12 pl-0 pb-3">
+            <h3><strong>Productos:</strong></h3>
+        </div>
+        {%csrf_token%}
+        {%for producto in productos%}
+
+           <div class="col-auto custom-control custom-switch">
+               <input type="checkbox" class="custom-control-input" id="customSwitch{{producto.id}}" name="{{producto.id}}" {%if producto.estado_producto%} checked {%endif%} >
+               <label class="custom-control-label pr-2 h4" for="customSwitch{{producto.id}}">{{producto}}</label>
+           </div>
+           <div  class="col-auto d-none d-sm-block">
+            <a href="{%url 'lista_compra:eliminar_pc' ldc.id producto.id%}" class="btn btn-danger pt-1 pb-1"><span data-icon="t"></span> Borrar</a>
+               <a href="{%url 'lista_compra:editar_pc' ldc.id producto.id%}" class="btn btn-primary pt-1 pb-1"><span data-icon="u"></span> Modificar</a>
+               <a href="{%url 'lista_compra:detail_pc' ldc.id producto.id%}" class="btn btn-dark pt-1 pb-1"><span data-icon="w"></span> Detalle</a>
+           </div>
+
+           <div class="col-auto d-sm-none mt-1" style="padding-left:36px;">
+               <a href="{%url 'lista_compra:eliminar_pc' ldc.id producto.id%}" class="btn btn-danger"><span data-icon="t"></span></a>
+               <a href="{%url 'lista_compra:editar_pc' ldc.id producto.id%}" class="btn btn-primary "><span data-icon="u"></span></a>
+               <a href="{%url 'lista_compra:detail_pc' ldc.id producto.id%}" class="btn btn-dark"><span data-icon="w"></span></a>
+           </div>
+
+           <div class="w-100 mb-3"></div>
+        {%endfor%}
+        <br>
+        <div class="col-12 text-center mt-3">
+           <input type="submit" value="Guardar" class="btn btn-info">
+        </div>
+    </form>
+
+
+        {%else%}
+    <div class="row">
+        <div class="col-12 m-4">
+            <h4><strong>No hay productos en esta lista aun!</strong></h4>
+        </div>
+    </div>
+    {%endif%}
+    <div class="row">
+        <div class="col-12 m-4">
+            <a href="{%url 'lista_compra:list_ldc'%}" class="btn btn-secondary "><span data-icon="x"></span> Volver</a>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,65 @@
+{%extends 'core/base.html'%}
+{%block title%}Agregar Lista de Compras{%endblock%}
+{%block content%}
+
+<div class="container shadow container-whithe">
+    <div class="row">
+        <div class="col-12 text-center mt-4 mb-4">
+            <h1>Agregar lista nueva</h1>
+            <hr>
+        </div>
+        <!--ALERTS-->
+        {%if request.GET.msg == 'crear_ldc_error'%}
+        <div class="col-12 text-center">
+             <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <h6 style="color: #dc3545;"><strong>La lista no pudo crearse, intentelo denuevo mas tarde.</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%endif%}
+        <!--FIN ALERTS-->
+        <div class="col-12">
+           <form method="POST" class="form-row justify-content-center" onsubmit="return validar_ldc()">
+               <input type="hidden" name="usuario" id="id_usuario" value="{{request.user.id}}">
+                {%csrf_token%}
+                <div class="col-12 col-sm-5 mb-4">
+                    {{form.nombre.label}}
+                    {{form.nombre}}
+                    <div class="invalid-feedback">
+                        <p id="id_nombre-invalid" class="m-0"></p>
+                    </div>
+                    <div class="valid-feedback">
+                        <p id="id_nombre-valid" class="m-0">Correcto</p>
+                    </div>
+                </div>
+
+               <div class="w-100"></div>
+
+               <div class="col-12 col-sm-5">
+                    {{form.local.label}}
+                    {{form.local}}
+                   <div class="invalid-feedback">
+                        <p id="id_local-invalid" class="m-0"></p>
+                   </div>
+                   <div class="valid-feedback">
+                        <p id="id_local-valid" class="m-0">Correcto</p>
+                   </div>
+               </div>
+
+               <div class="w-100"></div>
+
+               <div class="col-12 col-sm-5 form-group text-center mt-5">
+                <button type="submit" class="btn btn-success"><span data-icon="v"></span> Agregar</button>
+            </div>
+
+           </form>
+        </div>
+        <div class="col-12 m-4">
+           <a href="{%url 'lista_compra:list_ldc'%}" class="btn btn-secondary "><span data-icon="x"></span> Volver</a>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

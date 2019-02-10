@@ -1,0 +1,102 @@
+{%extends 'core/base.html'%}
+{%block title%}Actualizar Productos{%endblock%}
+{%block content%}
+<div class="container shadow container-whithe">
+	<div class="row">
+		<div class="col-12 text-center">
+			<h1>Actualizar Producto</h1>
+		</div>
+	</div>
+		 <form method="post" enctype="multipart/form-data" class="form-row justify-content-center" onsubmit="return validar()">
+			{% csrf_token %}
+			{{form.usuario}}
+
+				<div class="col-12 col-sm-6 form-group">
+				   {{form.nombre.label}}
+				   {{form.nombre}}
+					<div class="invalid-feedback">
+						<p id="id_nombre-invalid" class="m-0"></p>
+					</div>
+					<div class="valid-feedback">
+						<p id="id_nombre-valid" class="m-0">Correcto</p>
+					</div>
+				</div>
+				 <div class="col-12 col-sm-6 form-group">
+				  {{form.categoria.label}}
+				   {{form.categoria}}
+					 <div class="invalid-feedback">
+						<p id="id_categoria-invalid" class="m-0"></p>
+					</div>
+					<div class="valid-feedback">
+						<p id="id_categoria-valid" class="m-0">Correcto</p>
+					</div>
+				</div>
+
+				<div class="w-100"></div>
+
+				<div class="col-6 col-sm-4 form-group">
+					{{form.precio_compra.label}}
+				   {{form.precio_compra}}
+					<div class="invalid-feedback">
+						<p id="id_precio_compra-invalid" class="m-0"></p>
+					</div>
+					<div class="valid-feedback">
+						<p id="id_precio_compra-valid" class="m-0">Correcto</p>
+					</div>
+				</div>
+
+				<div class="col-6 col-sm-4 form-group">
+					{{form.precio_venta.label}}
+				   {{form.precio_venta}}
+					<div class="invalid-feedback">
+						<p id="id_precio_venta-invalid" class="m-0"></p>
+					</div>
+					<div class="valid-feedback">
+						<p id="id_precio_venta-valid" class="m-0">Correcto</p>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-4 form-group">
+					{{form.unidad_medida.label}}
+				   {{form.unidad_medida}}
+					<div class="invalid-feedback">
+						<p id="id_unidad_medida-invalid" class="m-0"></p>
+					</div>
+					<div class="valid-feedback">
+						<p id="id_unidad_medida-valid" class="m-0">Correcto</p>
+					</div>
+				</div>
+
+            <div class="col-12 col-sm-6 form-group">
+                {{form.promocion.label}}
+               {{form.promocion}}
+            </div>
+
+            <div class="col-12 col-sm-6 form-group">
+                {{form.descripcion.label}}
+               {{form.descripcion}}
+
+            </div>
+
+			<div class="col-12 col-sm-12 form-group">
+				<p><strong>Imagen actual: </strong></p>
+				<img src="/media/{{form.imagen.value}}" class="rounded mb-3" style="max-width: 200px;">
+				<br>
+			   {{form.imagen}}
+			</div>
+
+
+					<div class="col-12 form-group text-center mt-3">
+						<button type="submit" class="btn btn-primary"><span data-icon="u"></span> Actualizar</button>
+					</div>
+
+		</form>
+	<div class="row justify-content-center">
+		<div class="col-12 m-4">
+			<a href="{%url 'productos:list'%}" class="btn btn-secondary "><span data-icon="x"></span> Volver</a>
+		</div>
+	</div>
+
+</div>
+
+{%endblock%}

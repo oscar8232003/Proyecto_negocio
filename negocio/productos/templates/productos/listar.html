@@ -1,0 +1,150 @@
+{%extends 'core/base.html'%}
+{%block title%}Listando Productos{%endblock%}
+{%block content%}
+<div class="container shadow container-whithe">
+    <div class="row">
+        <div class="col-12 text-center p-4">
+            <h1>Productos</h1>
+            <p><strong>Aqui encontraras un listado de la mayoria de los productos que se encuentran en venta en el local, esto no quiere decir que sean todo, cada vez tenemos aun mas.</strong></p>
+            <hr>
+        </div>
+        <div class="col-12 mb-3">
+            {%if request.user.id is not None and request.session.tipo == 'Interno' or request.session.tipo == 'Administrador'%}
+                <a href="{%url 'productos:agregar'%}" class="btn btn-success"><span data-icon="v"></span> Agregar producto</a>
+            {%endif%}
+            <br>
+        </div>
+    </div>
+
+    <div class="row text-center">
+         <form action="{% url 'productos:list'%}" method="post" class="col-6 col-md-4" onsubmit="return validar_buscar();">
+            {%csrf_token%}
+             <div>
+                <input type="text" name="buscar" class="form-control" placeholder="ejem. arroz aruba" id="buscar_producto">
+                <div class="invalid-feedback">
+                    <p id="buscar_producto-invalid" class="m-0"></p>
+                </div>
+                <div class="valid-feedback">
+                    <p id="buscar_producto-valid" class="m-0">Correcto</p>
+                </div>
+             </div>
+            <input type="submit" value="Buscar" class="btn btn-secondary mt-2">
+        </form>
+
+        <form action="{%url 'productos:list'%}" method="post" class="col-6 col-md-4" onsubmit="return validar_categoria();">
+            {%csrf_token%}
+            <div>
+                {{form.categoria}}
+                <div class="invalid-feedback">
+                    <p id="id_categoria-invalid" class="m-0"></p>
+                </div>
+                <div class="valid-feedback">
+                    <p id="id_categoria-valid" class="m-0">Correcto</p>
+                </div>
+            </div>
+            <input type="submit" value="Filtrar" class="btn btn-secondary mt-2">
+        </form>
+    </div>
+
+    <!--SECCION DE ALERTAS-->
+    <div class="row">
+        {%if request.GET.msg == 'upd_ok'%}
+        <div class="col-12 text-center mt-5">
+             <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <h6 style="color: rgb(33, 95, 30);"><strong>Producto actualizado exitosamente</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%elif request.GET.msg == 'eli_ok'%}
+        <div class="col-12 text-center mt-5">
+             <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <h6 style="color: rgb(33, 95, 30);"><strong>Producto eliminado exitosamente</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%elif request.GET.msg == 'crear_ok'%}
+        <div class="col-12 text-center mt-5">
+             <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <h6 style="color: rgb(33, 95, 30);"><strong>Producto creado exitosamente</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%elif request.GET.msg == 'crear_error'%}
+        <div class="col-12 text-center mt-5">
+             <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <h6 style="color: #dc3545;"><strong>El producto no pudo crearse, intentelo denuevo mas tarde.</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%elif request.GET.msg == 'upd_error'%}
+        <div class="col-12 text-center mt-5">
+             <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <h6 style="color: #dc3545;"><strong>El producto no pudo actualizarse, intentelo denuevo mas tarde.</strong></h6>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+         </div>
+        {%endif%}
+    </div>
+    <!--FIN SECCION DE ALERTAS-->
+
+    <!--LISTADO DE LOS PRODUCTOS-->
+        <ul class="list-unstyled row mt-small-5 mb-0">
+            {%if productos.exists%}
+                {% for obj in productos%}
+                <!--El contenedor del prod-->
+                <div class="col-12 col-md-6 p-3" data-aos="zoom-in-right">
+                    <!--clase media-->
+					<div class="media shadow rounded productos_listar">
+                        <!--Contenedor de la imagen-->
+						<div class="col-4 col-sm-3 p-2">
+                            <a href="/media/{{obj.imagen}}" data-lightbox="Objecto{{obj.id}}" data-title="{{obj.nombre}}"><img class="img-fluid rounded" src="/media/{{obj.imagen}}"></a>
+						</div>
+                        <!--Contenedor del parrafo-->
+						<div class="col-7 col-sm-9 p-2">
+						  <div class="media-body">
+                            <!--Titulo para PC-->
+						    <p class="d-sm-none"><a href="{%url 'productos:detail' obj.id%}" class="h6"><strong>{{obj.nombre}} ${{obj.precio_venta}}</strong></a></p>
+                              <!--Titulo para Mobile-->
+                            <p class="d-none d-sm-block"><a href="{%url 'productos:detail' obj.id%}" class="h4"><strong>{{obj.nombre}} ${{obj.precio_venta}}</strong></a></p>
+                              <!--Categoria-->
+						    <p class="small text-muted d-none d-sm-block">Categoria: <strong>{{obj.categoria}}</strong></p>
+                              <!--Oferta-->
+						    <p class="d-none d-sm-block">Oferta: <strong>{%if obj.oferta%}{{obj.oferta}}{%else%}No hay oferta para este producto{%endif%}</strong></p>
+                                <!--Descripcion-->
+                             {%if obj.descripcion%}
+                            <p class="d-none d-sm-block">Descripcion: <strong>{{obj.descripcion}}</strong></p>
+                             {%endif%}
+
+                            <!--Botones-->
+                            {%if request.user.id is not None and request.session.tipo == 'Interno' or request.session.tipo == 'Administrador'%}
+                              <!--Botones PC-->
+                             <p class="d-none d-sm-block mb-1"><a href="{% url 'productos:eliminar' obj.id%}" class="btn btn-danger"><span data-icon="t"></span> Borrar</a>
+                                <a href="{%url 'productos:update' obj.id%}" class="btn btn-primary"><span data-icon="u"></span> Actualizar</a></p>
+                              <!--Botones Mobile-->
+                             <p class="d-sm-none mb-1"><a href="{% url 'productos:eliminar' obj.id%}" class="btn btn-danger"><span data-icon="t"></span></a>
+                                <a href="{%url 'productos:update' obj.id%}" class="btn btn-primary"><span data-icon="u"></span></a></p>
+                            {%endif%}
+                          </div>
+						</div>
+					</div>
+				</div>
+                {%endfor%}
+            {%else%}
+            <div class="col-12 text-center p-3">
+                <h3>No se encuentran productos disponibles, aun!</h3>
+            </div>
+
+            {%endif%}
+        </ul>
+    </div>
+{%endblock%}

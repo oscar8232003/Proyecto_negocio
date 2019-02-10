@@ -1,0 +1,11 @@
+{%extends 'core/base.html'%}
+{%block content%}
+{%if 'ok' in request.GET %}
+    <p><b>Su mensaje se ha enviado rectamente</b></p>
+{%endif%}
+<form action="" method="POST">
+{%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Enviar">
+</form>
+{%endblock%}

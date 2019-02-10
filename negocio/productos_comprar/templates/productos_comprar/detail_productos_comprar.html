@@ -1,0 +1,27 @@
+{%extends 'core/base.html'%}
+{%block title%}{{object.cod_productos.nombre}}{%endblock%}
+{%block content%}
+<div class="container shadow container-whithe">
+    <div class="row">
+        <div class="col-12">
+
+        </div>
+    </div>
+</div>
+
+<a href="{% url 'lista_compra:editar_pc' id object.id%}">Modificar</a>
+<ul>
+    <li>nombre del producto {{object.cod_productos.nombre}}</li>
+    <li>Cantidad {{object.cantidad}}</li>
+    <li>Total de {{object.total_producto}}</li>
+
+    {%if object.comentarios != ""%}
+    <li>{{object.comentarios}}</li>
+    {%else%}
+    <li>No hay comentarios para este producto</li>
+    {%endif%}
+</ul>
+
+<br>
+<a href="{%url 'lista_compra:detail_ldc' id%}">Volver</a>
+{%endblock%}

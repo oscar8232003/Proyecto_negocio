@@ -1,0 +1,107 @@
+<!--EMPIEZA HEADER!-->
+		<!--NAVBAR, TOP-->
+		<header class="container-fluid p-0">
+			<!--TOP-->
+			<div class="row m-0 BACKGROUND-TOP justify-content-center pb-1">
+			<!--REDES SOCIALES-->
+			<!--PROXIMAMENTE
+				<div class="col-lg-5 col-xl-4 pr-0 d-none d-lg-block">
+					<ul class="lista">
+						<li><a><h6>Siguenos! </h6></a></li>
+						<li><a href="#"><h6 data-icon="j" class="face"></h6></a></li>
+						<li><a href="#"><h6 data-icon="k" class="instagram"></h6></a></li>
+						<li><a href="#"><h6 data-icon="l" class="twitter"></h6></a></li>
+						<li><a href="#"><h6 data-icon="m" class="twitch"></h6></a></li>
+						<li><a href="#"><h6 data-icon="n" class="youtube"></h6></a></li>
+					</ul>
+				</div>-->
+				<!--QUIENES SOMOS-->
+				<div class="col-xl-7 col-lg-10 text-left d-none d-lg-block">
+					<ul class="lista">
+						<li><a href="{% url 'core:quienes_somos'%}"><h6 class="top-a"><span class="icon-question-circle"> </span>Quienes Somos </h6></a></li>
+						<li><a href="{% url 'core:quiero_comprar'%}"><h6 class="top-a"><span class="icon-hand-o-right"> </span>Quiero comprar </h6></a></li>
+						<!--<li><a href="#"><h6 class="top-a"> Contactanos </h6></a></li>-->
+					</ul>
+				</div>
+			</div>
+
+			<!--NAVBAR!-->
+			<div class="row m-0 justify-content-center barra_navbar">
+				<div class="col-12 col-sm-8 col-md-8 col-lg-10 col-xl-7 p-0 m-0">
+					<nav class="navbar navbar-expand-lg navbar-dark col-12 barra_navbar pb-1 pt-0">
+
+							<a class="navbar-brand TITULO p-0 mr-1" href="#">Sra. Ines</a>
+
+						<p class="mb-0">
+                            {%if not request.user.is_authenticated%}
+							<a href="{%url 'login'%}" class="navbar-brand d-lg-none"><span class="icon-user-1"></span></a>
+                          {%endif%}
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".colapsable" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					   		<span class="navbar-toggler-icon"></span>
+					  		</button>
+						</p>
+
+
+					  <div class="collapse navbar-collapse colapsable " id="navbarSupportedContent">
+					    <ul class="navbar-nav mr-auto">
+                            {%if request.user.is_authenticated%}
+                            <li class="nav-item">
+                            <a class="navbar-brand d-lg-none" style="color: white;">Bienvenido {{request.user.first_name}}</a>
+                            </li>
+                            {%else%}
+                            <li class="nav-item">
+                            <a href="{%url 'login'%}" class="btn btn-success d-lg-none"><span class="icon-user-1"> </span>Ingresar</a>
+                            </li>
+                            {%endif%}
+						    <li class="nav-item">
+						        <a class="nav-link {%if request.path == '/'%}active{%endif%}" href="{%url 'core:index'%}">Inicio<span class="sr-only">(current)</span></a>
+						    </li>
+
+						    <li class="nav-item">
+						        <a class="nav-link {%if request.path|slice:"1:10" == 'productos'%}active{%endif%}" href="{%url 'productos:list'%}">Productos<span class="sr-only">(current)</span></a>
+						    </li>
+
+							{%if request.user.id is not None and request.session.tipo == 'Interno' or request.session.tipo == 'Administrador'%}
+						    <li class="nav-item">
+						        <a class="nav-link {%if request.path|slice:"1:4" == 'ldc'%}active{%endif%}" href="{%url 'lista_compra:list_ldc'%}">Listas de Compras<span class="sr-only">(current)</span></a>
+						    </li>
+							{%endif%}
+
+							{%if request.user.id is not None and request.session.tipo == 'Administrador'%}
+						    <li class="nav-item">
+						        <a class="nav-link" href="{%url 'admin:index'%}">Admin<span class="sr-only">(current)</span></a>
+						    </li>
+							{%endif%}
+
+						    <li class="nav-item d-lg-none">
+						      	<a href="{% url 'core:quienes_somos'%}" class="nav-link {%if request.path == '/quienes_somos/'%}active{%endif%}"><span class="icon-question-circle"> </span>Quienes Somos<span class="sr-only">(current)</span></a>
+						    </li>
+
+						    <li class="nav-item d-lg-none">
+						      	<a href="{% url 'core:quiero_comprar'%}" class="nav-link {%if request.path == '/quiero_comprar/'%}active{%endif%}"><span class="icon-hand-o-right"> </span>Quiero comprar<span class="sr-only">(current)</span></a>
+						    </li>
+							<!--
+						    <li class="nav-item d-lg-none">
+						      	<a href="#" class="nav-link"><span class="icon-envelope"> </span>Contactanos<span class="sr-only">(current)</span></a>
+						    </li>
+							-->
+					    </ul>
+					    <!-- BUSQUEDA
+					    <form class="form-inline my-2 my-lg-0">
+					      <input class="form-control mr-sm-1" type="text" placeholder="Busqueda" aria-label="Search">
+					      <button class="btn my-2 color_celeste my-sm-0" type="submit" data-icon="f"></button>
+					    </form>
+					    -->
+                          {%if not request.user.is_authenticated%}
+					    <a href="{%url 'login'%}" class="LOGIN d-none d-lg-block"><span class="icon-user-1"> </span>INGRESAR</a>
+                          {%else%}
+                          <a class="LOGUEADO d-none d-lg-block pr-4" style="color: white;"><span class="icon-user-1"> </span>{{request.user.first_name}}</a>
+                          <a href="{%url 'logout'%}" class="btn btn-danger"><span class="icon-sign-out"></span> Salir</a>
+                          {%endif%}
+					  </div>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+	<!--TERMINA HEADER!-->

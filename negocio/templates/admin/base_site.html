@@ -1,0 +1,49 @@
+{% extends "admin/base.html" %}
+{% load static%}
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrastyle%}
+<style>
+        @font-face {
+        font-family: "William";
+        src: url(/static/core/fonts/Willian.ttf) format("truetype");
+        }
+        @font-face {
+        font-family: "Carnevale";
+        src: url(/static/core/fonts/Carnevale.ttf) format("truetype");
+        }
+
+        #header{
+        background-color: #222;
+        color: #fff;
+        }
+
+		#branding h1, #branding h1 a:link, #branding h1 a:visited{
+		color:#fff;
+		font-family: "William";
+		font-size:3rem;
+		}
+		.module h2, .module caption, .inline-group h2{
+		background-color: #222;
+		}
+
+        .colMS{
+        }
+
+        h1{
+        text-align: center;
+        font-size:1.8rem;
+        color:#222;
+        }
+
+        div.breadcrumbs{
+        background:#222;
+        }
+</style>
+{%endblock%}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}" class="titulo">Sra. Ines</a></h1>
+{% endblock %}
+
+
+{% block nav-global %}{% endblock %}

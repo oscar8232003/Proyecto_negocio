@@ -1,0 +1,53 @@
+{%extends 'core/base.html'%}
+{%block title%}Detalle {{object.nombre}}{%endblock%}
+{%block content%}
+<div class="container shadow container-whithe">
+    <div class="row">
+        <div class="col-12">
+            <h1>Detail</h1>
+        </div>
+        <div class="col-12">
+            <ul>
+                {%if object.imagen%}
+                <li><img src="{{object.imagen.url}}" alt=""></li>
+                {%else%}
+                <li>No hay imagen actualmente</li>
+                {%endif%}
+                <li>Nombre: {{object.nombre}}</li>
+                <li>Categoria: {{object.categoria}}</li>
+
+                {%if request.user.id is not None %}
+                <li>Precio de Compra:{{object.precio_compra}}</li>
+                {%endif%}
+
+                <li>Precio de Venta Actual:{{object.precio_venta}}</li>
+
+                {%if object.promocion%}
+                <li>{{object.promocion}}</li>
+                {%else%}
+                <li>No se cuenta con promocion el producto</li>
+                {%endif%}
+
+                <li>{{object.unidad_medida}}</li>
+
+                {%if object.descripcion%}
+                <li>{{object.descripcion}}</li>
+                {%else%}
+                <li>No se cuenta con descripcion el producto</li>
+                {%endif%}
+
+                <li>{{object.fecha_actualizacion}}</li>
+            </ul>
+        </div>
+        <div class="col-12">
+            {%if request.user.id is not None and request.session.tipo == 'Interno' or request.session.tipo == 'Administrador'%}
+            <a href="{% url 'productos:eliminar' object.id%}">Eliminar</a>
+            | <a href="{%url 'productos:update' object.id%}">Updatear</a>
+            {%endif%}
+        </div>
+        <div class="col-12">
+            <a href="{%url 'productos:list'%}">Volver a lista</a>
+        </div>
+    </div>
+</div>
+{%endblock%}

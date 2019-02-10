@@ -1,0 +1,57 @@
+<!--FOOTER-->
+		<footer class="container-fluid pr-0 pl-0">
+			<div class="container">
+				<div class="row">
+					<!--DIRECCION Y CONTACTO-->
+					<div class="col-12 col-sm-4 mt-4 mb-3 text-center ">
+						<h4 class="TITULO">Sra. Ines</h4>
+						<hr>
+						<h6 data-icon="h"> Dirección</h6>
+						<p>Jose Miguel Carrera 1997, Macul</p>
+						<hr>
+						<h6 data-icon="a"> Contacto</h6>
+						<p>0228232003</p>
+						<hr>
+						<h6 data-icon="c"> Email de contacto</h6>
+						<p> oavr.18@gmail.com</p>
+					</div>
+					<!--REDES SOCIALES-->
+					<div class="col-12 col-sm-4 mt-4 mb-4 text-center">
+						<h5>Nuestras Redes Sociales</h5>
+						<hr>
+						<!--
+						<ul class="lista">
+						<li><a href="#"><h4 data-icon="j" class="face"></h4></a></li>
+						<li><a href="#"><h4 data-icon="k" class="instagram"></h4></a></li>
+						<li><a href="#"><h4 data-icon="l" class="twitter"></h4></a></li>
+						<li><a href="#"><h4 data-icon="m" class="twitch"></h4></a></li>
+						<li><a href="#"><h4 data-icon="n" class="youtube"></h4></a></li>
+						</ul>
+						-->
+						<h6>Proximamente!</h6>
+						<hr>
+						<!--MAPA GOOGLEMAPS-->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1663.6606692308055!2d-70.61272027523681!3d-33.4930158062271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d0057adcb637%3A0xe27be8ab6ecb4a16!2sJos%C3%A9+Miguel+Carrera+1997%2C+Macul%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses-419!2scl!4v1528140473484" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+					<!--SOBRE LA EMPRESA-->
+					<div class="col-12 col-sm-4 mt-4 mb-4 text-center">
+						<h4>Categorias de Productos</h4>
+						<hr>
+						{%if Categorias %}
+						{%for cat in Categorias%}
+						<a href="{%url 'productos:list_categoria' cat.id%}" class="CATEGORIAS_FOOTER">{{cat.nombre}}</a> |
+						{%endfor%}
+						{%else%}
+						<h5>No se encuentran Categorias disponibles</h5>
+						{%endif%}
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid" style="background: black;">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h6 class="text-muted m-1">&copy; 2019 Todos los derechos reservados. by Oscar V.</h6>
+					</div>
+				</div>
+			</div>
+		</footer>

@@ -1,0 +1,53 @@
+{%extends 'core/base.html'%}
+{%block title%}Actualizar producto{%endblock%}
+{%block content%}
+<div class="container shadow container-whithe">
+	<div class="row">
+		<div class="col-12 text-center p-5">
+			<h1>Modificar producto</h1>
+		</div>
+	</div>
+			<form method="POST" class="row justify-content-center" onsubmit="return validar_productos_comprar();">
+                {% csrf_token %}
+                <div class="col-12 col-sm-6 form-group">
+                    {{form.cod_productos.label}}
+                    {{form.cod_productos}}
+                    <div class="invalid-feedback">
+                        <p id="id_cod_productos-invalid" class="m-0"></p>
+                   </div>
+                   <div class="valid-feedback">
+                        <p id="id_cod_productos-valid" class="m-0">Correcto</p>
+                   </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-12 col-sm-6 form-group">
+                    {{form.cantidad.label}}
+                    {{form.cantidad}}
+                    <div class="invalid-feedback">
+                        <p id="id_cantidad-invalid" class="m-0"></p>
+                   </div>
+                   <div class="valid-feedback">
+                        <p id="id_cantidad-valid" class="m-0">Correcto</p>
+                   </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-12 col-sm-6 form-group">
+                    {{form.comentarios.label}}
+                    {{form.comentarios}}
+					{{form.cod_lista_compras}}
+                </div>
+                <div class="w-100"></div>
+
+                <div class="col-12 col-sm-6 text-center">
+                    <button type="submit" class="btn btn-primary"><span data-icon="u"></span> Actualizar producto</button>
+                </div>
+
+			</form>
+		<div class="row">
+			<div class="col-12 m-4">
+				<a href="{%url 'lista_compra:detail_ldc' ldc%}" class="btn btn-secondary "><span data-icon="x"></span> Volver</a>
+			</div>
+		</div>
+
+</div>
+{%endblock%}
