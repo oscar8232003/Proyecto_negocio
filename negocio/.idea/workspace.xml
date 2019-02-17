@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5c80c30-ef0a-46fd-b426-be9f68a09540" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/static/core/css/estilos_detalles.css" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/css/estilos_detalles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/static/core/js/validaciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/js/validaciones.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/quiero_comprar.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/quiero_comprar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/core/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/core/js/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/core/js/tether.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_compra/templates/lista_compra/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/lista_compra/templates/lista_compra/listar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_compra/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lista_compra/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/ico.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/productos/43588787_258003554825902_2993758626704785408_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/productos/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/productos/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/productos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/templates/productos/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/productos/templates/productos/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/templates/productos/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/productos/templates/productos/listar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/templates/productos/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/productos/templates/productos/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/productos/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/productos/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos_comprar/templates/productos_comprar/detail_productos_comprar.html" beforeDir="false" afterPath="$PROJECT_DIR$/productos_comprar/templates/productos_comprar/detail_productos_comprar.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,79 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productos/templates/productos/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="59" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/negocio/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/negocio/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="43" column="82" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/productos_comprar/templates/productos_comprar/detail_productos_comprar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lista_compra/templates/lista_compra/detail_ldc.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="99" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#h6#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#0;n#div#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/core/quiero_comprar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="49" selection-start-line="49" selection-end-line="49" selection-end-column="12" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/templates/404.html">
+        <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="321">
+              <caret line="71" column="49" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -116,7 +33,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/static/core/css/estilos_detalles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
+            <state relative-caret-position="1972">
               <caret line="116" column="27" lean-forward="true" selection-start-line="116" selection-start-column="27" selection-end-line="116" selection-end-column="27" />
             </state>
           </provider>
@@ -169,7 +86,6 @@
         <option value="$PROJECT_DIR$/productos/admin.py" />
         <option value="$PROJECT_DIR$/productos/form.py" />
         <option value="$PROJECT_DIR$/productos/models.py" />
-        <option value="$PROJECT_DIR$/core/templates/core/base.html" />
         <option value="$PROJECT_DIR$/core/static/core/js/validaciones.js" />
         <option value="$PROJECT_DIR$/lista_compra/views.py" />
         <option value="$PROJECT_DIR$/core/templates/core/slide.html" />
@@ -185,16 +101,17 @@
         <option value="$PROJECT_DIR$/registration/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/productos_comprar/templates/productos_comprar/detail_productos_comprar.html" />
         <option value="$PROJECT_DIR$/core/templates/core/footer.html" />
-        <option value="$PROJECT_DIR$/core/templates/core/quiero_comprar.html" />
         <option value="$PROJECT_DIR$/negocio/settings.py" />
         <option value="$PROJECT_DIR$/core/templates/404.html" />
         <option value="$PROJECT_DIR$/negocio/urls.py" />
+        <option value="$PROJECT_DIR$/core/templates/core/quiero_comprar.html" />
+        <option value="$PROJECT_DIR$/core/templates/core/base.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="128" />
-    <option name="y" value="42" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="361" />
+    <option name="y" value="38" />
     <option name="width" value="1435" />
     <option name="height" value="946" />
   </component>
@@ -235,14 +152,6 @@
               <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
               <item name="negocio" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -255,36 +164,6 @@
             <path>
               <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
               <item name="negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="lista_compra" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="lista_compra" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="lista_compra" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="lista_compra" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="negocio" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
               <item name="lista_compra" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -323,19 +202,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\Proyecto_negocio\negocio\media\lista_compra" />
-      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\media\core" />
-      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\core\templates\core" />
-      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\core" />
-      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\core\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\Proyecto_negocio\negocio\media\core" />
       <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\Proyecto_negocio\negocio\media\core\banner" />
       <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\media\core" />
       <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\core\static\core\fonts" />
       <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\media\productos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\Proyecto_negocio\negocio\core\static\core\js" />
+      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\Proyecto_negocio\negocio\media\lista_compra" />
+      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\media\core" />
+      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\core\templates\core" />
+      <recent name="C:\Users\oscar\Desktop\Pre-repo\Django\django2\negocio\core" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -373,13 +252,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="128" y="42" width="1435" height="946" extended-state="0" />
+    <frame x="361" y="38" width="1435" height="946" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5008183" side_tool="true" weight="0.21081081" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49918166" visible="true" weight="0.16750179" />
       <window_info id="Structure" order="2" sideWeight="0.5008183" side_tool="true" weight="0.21081081" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.6363636" visible="true" weight="0.3198032" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.36363637" side_tool="true" visible="true" weight="0.3198032" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.63564783" visible="true" weight="0.3198032" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.3643522" side_tool="true" visible="true" weight="0.3198032" />
       <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.4996421" weight="0.3280098" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
@@ -399,16 +279,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lista_compra/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productos_comprar/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -631,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/css/estilos_detalles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="116" column="27" lean-forward="true" selection-start-line="116" selection-start-column="27" selection-end-line="116" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productos/templates/productos/listar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -648,28 +511,6 @@
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#3;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#4;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lista_compra/templates/lista_compra/detail_ldc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="99" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#h6#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h6#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h6#0;n#div#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productos_comprar/templates/productos_comprar/detail_productos_comprar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -687,16 +528,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/core/banner/quiero_comprar2.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/media/core/banner/quiero_comprar2.jpeg" />
     <entry file="file://$PROJECT_DIR$/core/templates/core/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -712,38 +544,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productos/templates/productos/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="59" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/core/404.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/core/imagen_404.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/quiero_comprar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="49" selection-start-line="49" selection-end-line="49" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/lista_compra/prueba.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/core/prueba.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/media/core/imagen_404.png" />
+    <entry file="file://$PROJECT_DIR$/media/lista_compra/prueba.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/core/prueba.jpg" />
     <entry file="file://$PROJECT_DIR$/productos/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-442">
@@ -754,17 +560,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/negocio/urls.py">
+    <entry file="file://$PROJECT_DIR$/productos/templates/productos/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="43" column="82" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
+        <state relative-caret-position="969">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="59" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/negocio/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/negocio/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="43" column="82" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productos_comprar/templates/productos_comprar/detail_productos_comprar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lista_compra/templates/lista_compra/detail_ldc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="99" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#h6#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#div#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/estilos_detalles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" column="27" lean-forward="true" selection-start-line="116" selection-start-column="27" selection-end-line="116" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -772,6 +614,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/core/quiero_comprar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/img/top.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="71" column="49" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
         </state>
       </provider>
     </entry>
