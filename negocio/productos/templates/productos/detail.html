@@ -2,51 +2,61 @@
 {%block title%}Detalle {{object.nombre}}{%endblock%}
 {%block content%}
 <div class="container shadow container-whithe">
-    <div class="row">
-        <div class="col-12">
-            <h1>Detail</h1>
+    <div class="row pt-3 pb-5 p-md-5">
+        <div class="col-12 text-center pb-3 pb-md-5">
+            <h2><strong>Descripcion del producto</strong></h2>
         </div>
-        <div class="col-12">
-            <ul>
-                {%if object.imagen%}
-                <li><img src="{{object.imagen.url}}" alt=""></li>
-                {%else%}
-                <li>No hay imagen actualmente</li>
-                {%endif%}
-                <li>Nombre: {{object.nombre}}</li>
-                <li>Categoria: {{object.categoria}}</li>
-
-                {%if request.user.id is not None %}
-                <li>Precio de Compra:{{object.precio_compra}}</li>
-                {%endif%}
-
-                <li>Precio de Venta Actual:{{object.precio_venta}}</li>
-
-                {%if object.promocion%}
-                <li>{{object.promocion}}</li>
-                {%else%}
-                <li>No se cuenta con promocion el producto</li>
-                {%endif%}
-
-                <li>{{object.unidad_medida}}</li>
-
-                {%if object.descripcion%}
-                <li>{{object.descripcion}}</li>
-                {%else%}
-                <li>No se cuenta con descripcion el producto</li>
-                {%endif%}
-
-                <li>{{object.fecha_actualizacion}}</li>
-            </ul>
+        <div class="col-md-4 col-12 text-center">
+            <img src="{{object.imagen.url}}" class="img-fluid img-thumbnail">
         </div>
-        <div class="col-12">
+
+        <div class="col-md-8 col-12 pt-md-0 pt-4">
+           <h3>{{object.nombre}}</h3>
+
+            <p class="mb-0"><strong>Categoria</strong></p>
+            <p><em>{{object.categoria}}</em></p>
+
+            <p class="mb-0"><strong>Unidad de Medida</strong></p>
+            <p>{{object.unidad_medida}}</p>
+
+            {%if request.user.id is not None%}
+            <p class="mb-0"><strong>Precio de Compra</strong></p>
+            <p>${{object.precio_compra}}</p>
+            {%endif%}
+
+            <p class="mb-0"><strong>Precio de Venta actual</strong></p>
+            <p>${{object.precio_venta}}</p>
+
+            {%if request.user.id is not None and precio_estimado != 0 and request.session.tipo == 'Interno' or request.session.tipo == 'Administrador'%}
+            <p class="mb-0"><strong>Precio de Venta con 30% de ganancia estimado</strong></p>
+            <p>${{precio_estimado}}</p>
+            {%endif%}
+
+             <p class="mb-0"><strong>Promocion actual</strong></p>
+            {%if object.promocion%}
+            <p>{{object.promocion}}</p>
+            {%else%}
+            <p>No se cuenta con promocion el producto</p>
+            {%endif%}
+
+            <p class="mb-0"><strong>Descripcion</strong></p>
+            {%if object.descripcion%}
+            <p>{{object.descripcion}}</p>
+            {%else%}
+            <p>No se cuenta con descripcion el producto</p>
+            {%endif%}
+
+            <p class="mb-0"><strong>Fecha de ultima modificacion</strong></p>
+            <p><em>{{object.fecha_actualizacion}}</em></p>
+            <br>
             {%if request.user.id is not None and request.session.tipo == 'Interno' or request.session.tipo == 'Administrador'%}
-            <a href="{% url 'productos:eliminar' object.id%}">Eliminar</a>
-            | <a href="{%url 'productos:update' object.id%}">Updatear</a>
+            <a href="{% url 'productos:eliminar' object.id%}" class="btn btn-danger"><span data-icon="t"></span> Borrar</a>
+            <a href="{%url 'productos:update' object.id%}" class="btn btn-primary"><span data-icon="u"></span> Actualizar</a>
             {%endif%}
         </div>
-        <div class="col-12">
-            <a href="{%url 'productos:list'%}">Volver a lista</a>
+
+        <div class="col-12 pt-4">
+            <a href="{%url 'productos:list'%}" class="btn btn-secondary "><span data-icon="x"></span> Volver</a>
         </div>
     </div>
 </div>

@@ -12,13 +12,15 @@ function validar_nombre(){
 			nombre.classList.add("is-valid");
 			return true;
 		}else{
-			span_nombre.innerHTML="Hay un error con el nombre.";
+			span_nombre.innerHTML="Ingrese un nombre valido";
 			nombre.classList.add("is-invalid");
+			nombre.focus();
 			return false;
 		}
 	}else{
 		span_nombre.innerHTML="Por favor rellene el campo en blanco.";
 		nombre.classList.add("is-invalid");
+		nombre.focus();
 		return false;
 	}
 }
@@ -34,6 +36,7 @@ function validar_categoria(){
 	}else{
 		span_categoria.innerHTML="Seleccione una categoria";
 		categoria.classList.add("is-invalid");
+		categoria.focus();
 		return false;
 	}
 }
@@ -49,6 +52,7 @@ function validar_unidad_medida(){
 	}else{
 		span_unidad_medida.innerHTML="Seleccione una opcion";
 		unidad_medida.classList.add("is-invalid");
+		unidad_medida.focus();
 		return false;
 	}
 }
@@ -64,6 +68,7 @@ function validar_precio_compra(){
         }else{
             span_precio_compra.innerHTML="Rellene el campo correctamente";
             precio_compra.classList.add("is-invalid");
+            precio_compra.focus();
             return false;
         }
 }
@@ -79,6 +84,7 @@ function validar_precio_venta(){
         }else{
             span_precio_venta.innerHTML="Rellene el campo correctamente";
             precio_venta.classList.add("is-invalid");
+            precio_venta.focus();
             return false;
         }
 }
@@ -141,6 +147,7 @@ function validar_buscar(){
 	}else{
 		span_buscar.innerHTML="Por favor rellene el campo";
 		buscar.classList.add("is-invalid");
+		buscar.focus();
 		return false;
 	}
 }
@@ -159,6 +166,7 @@ function validar_local(){
 	}else{
 		span_local.innerHTML="Seleccione un local";
 		local.classList.add("is-invalid");
+		local.focus();
 		return false;
 	}
 }
@@ -187,6 +195,7 @@ function validar_producto(){
 	}else{
 		span_producto.innerHTML="Seleccione un Producto";
 		producto.classList.add("is-invalid");
+		producto.focus();
 		return false;
 	}
 }
@@ -202,6 +211,7 @@ function validar_cantidad(){
         }else{
             span_cantidad.innerHTML="Rellene el campo correctamente";
             cantidad.classList.add("is-invalid");
+            cantidad.focus();
             return false;
         }
 }

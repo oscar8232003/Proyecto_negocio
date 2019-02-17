@@ -18,7 +18,7 @@
 				<!--QUIENES SOMOS-->
 				<div class="col-xl-7 col-lg-10 text-left d-none d-lg-block">
 					<ul class="lista">
-						<li><a href="{% url 'core:quienes_somos'%}"><h6 class="top-a"><span class="icon-question-circle"> </span>Quienes Somos </h6></a></li>
+						<!--<li><a href="{% url 'core:quienes_somos'%}"><h6 class="top-a"><span class="icon-question-circle"> </span>Quienes Somos </h6></a></li>-->
 						<li><a href="{% url 'core:quiero_comprar'%}"><h6 class="top-a"><span class="icon-hand-o-right"> </span>Quiero comprar </h6></a></li>
 						<!--<li><a href="#"><h6 class="top-a"> Contactanos </h6></a></li>-->
 					</ul>
@@ -30,7 +30,7 @@
 				<div class="col-12 col-sm-8 col-md-8 col-lg-10 col-xl-7 p-0 m-0">
 					<nav class="navbar navbar-expand-lg navbar-dark col-12 barra_navbar pb-1 pt-0">
 
-							<a class="navbar-brand TITULO p-0 mr-1" href="#">Sra. Ines</a>
+							<a class="navbar-brand TITULO p-0 mr-1" href="{%url 'core:index'%}">Sra. Ines</a>
 
 						<p class="mb-0">
                             {%if not request.user.is_authenticated%}
@@ -72,11 +72,11 @@
 						        <a class="nav-link" href="{%url 'admin:index'%}">Admin<span class="sr-only">(current)</span></a>
 						    </li>
 							{%endif%}
-
+							<!--
 						    <li class="nav-item d-lg-none">
 						      	<a href="{% url 'core:quienes_somos'%}" class="nav-link {%if request.path == '/quienes_somos/'%}active{%endif%}"><span class="icon-question-circle"> </span>Quienes Somos<span class="sr-only">(current)</span></a>
 						    </li>
-
+							-->
 						    <li class="nav-item d-lg-none">
 						      	<a href="{% url 'core:quiero_comprar'%}" class="nav-link {%if request.path == '/quiero_comprar/'%}active{%endif%}"><span class="icon-hand-o-right"> </span>Quiero comprar<span class="sr-only">(current)</span></a>
 						    </li>

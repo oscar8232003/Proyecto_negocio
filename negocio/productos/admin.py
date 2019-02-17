@@ -4,7 +4,7 @@ from .models import Productos, Categorias, Tipo, Unidades_Medidas
 
 class ProductosAdmin(admin.ModelAdmin):
     #Sirve para ver los campos a mostrar en la lista de productos
-    list_display = ('nombre', 'usuario', 'categoria')
+    list_display = ('nombre', 'precio_compra', 'precio_venta', 'usuario', 'categoria')
 
     #Agregar una barra de busqueda, por nombre y nombre de categoria, se pone __ para buscar desde otra tabla que tenga una referencia
     search_fields = ('nombre', 'categoria__nombre')

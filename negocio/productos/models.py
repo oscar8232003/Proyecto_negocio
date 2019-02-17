@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+
 class Categorias(models.Model):
     nombre = models.CharField(verbose_name="Nombre categoria", max_length=100)
 

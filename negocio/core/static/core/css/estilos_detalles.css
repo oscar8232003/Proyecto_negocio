@@ -117,3 +117,32 @@
         /*------------------------------ MEDIA QUERIES------------------------------*/
 
 		/*------------------------------ END MEDIA QUERIES------------------------------*/
+
+		/*------------------------------ CUADROS INDEX------------------------------*/
+
+        .cuadros{
+        border-radius: 100%;
+        transition: all 2s;
+        }
+
+        .cuadros:hover{
+        transform: rotateY(360deg);
+        }
+
+        .bc-verde{
+        background-color: #78FFD6;
+        }
+
+        .bc-celeste{
+        background-color: #0AD3FF;
+        }
+
+        .bc-amarillo{
+        background-color: #F9DC5C;
+        }
+
+        .icono{
+        font-size:40px;
+
+        }
+		/*------------------------------ END CUADROS------------------------------*/

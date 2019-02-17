@@ -7,6 +7,7 @@ from productos_comprar.models import Productos_Comprar_Model
 from .forms import Agregar_ldc_Form
 from django.db.models.aggregates import Sum
 from productos.models import Tipo
+from django.core.paginator import Paginator
 
 #Sirve para listar las ldc
 @login_required(redirect_field_name='login')
@@ -25,8 +26,10 @@ def lista_ldc(request):
                     if not obj == "csrfmiddlewaretoken":
                         lista_provisioria=Lista_Compra.objects.get(pk = obj)
                         suma_lista+=lista_provisioria.total_lista
-
-        return render(request, 'lista_compra/listar.html', {'listas':listas, 'suma_lista':suma_lista})
+        paginator = Paginator(listas, 8)
+        page = request.GET.get('page')
+        Listas = paginator.get_page(page)
+        return render(request, 'lista_compra/listar.html', {'listas':Listas, 'suma_lista':suma_lista})
     else:
         return redirect('registration:sin_permiso')
 

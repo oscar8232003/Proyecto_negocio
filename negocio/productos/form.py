@@ -36,7 +36,7 @@ class AgregarProductos(forms.ModelForm):
             'categoria' : forms.Select(attrs={'class':'form-control'}),
             'precio_venta' : forms.TextInput(attrs={'class':'form-control'}),
             'precio_compra' : forms.TextInput(attrs={'class':'form-control'}),
-            'promocion' : forms.Textarea(attrs={'class':'form-control','rows':2,}),
+            'promocion' : forms.Textarea(attrs={'class':'form-control','rows':2, }),
             'unidad_medida' : forms.Select(attrs={'class':'form-control'}),
             'descripcion' : forms.Textarea(attrs={'class':'form-control','rows':2,}),
             'imagen': forms.ClearableFileInput(attrs={'class':'form-control-file',}),

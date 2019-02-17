@@ -2,26 +2,34 @@
 {%block title%}{{object.cod_productos.nombre}}{%endblock%}
 {%block content%}
 <div class="container shadow container-whithe">
-    <div class="row">
-        <div class="col-12">
+    <div class="row pt-5 pb-5 justify-content-center">
 
+        <div class="col-12 col-md-6 p-5 shadow" style="border-radius: 10px;">
+            <h2 class="pb-5"><strong>Detalle del producto a comprar</strong></h2>
+
+            <h3><strong>{{object.cod_productos.nombre}}</strong></h3>
+
+            <p class="mb-0"><strong>Cantidad</strong></p>
+            <p><em>{{object.cantidad}} {{object.cod_productos.unidad_medida}}</em></p>
+
+            <p class="mb-0"><strong>Total</strong></p>
+            <p><em>$ {{object.total_producto}}</em></p>
+
+            <p class="mb-0"><strong>Comentarios</strong></p>
+            {%if object.comentarios%}
+            <p><em>{{object.comentarios}}</em></p>
+            {%else%}
+            <p>No se cuenta con comentarios del producto</p>
+            {%endif%}
+
+            <a href="{%url 'lista_compra:eliminar_pc' id object.id%}" class="btn btn-danger pt-1 pb-1"><span data-icon="t"></span> Borrar</a>
+            <a href="{%url 'lista_compra:editar_pc' id object.id%}" class="btn btn-primary pt-1 pb-1"><span data-icon="u"></span> Modificar</a>
+        </div>
+
+        <div class="col-12 pt-5">
+            <a href="{%url 'lista_compra:detail_ldc' id%}" class="btn btn-secondary "><span data-icon="x"></span> Volver</a>
         </div>
     </div>
 </div>
 
-<a href="{% url 'lista_compra:editar_pc' id object.id%}">Modificar</a>
-<ul>
-    <li>nombre del producto {{object.cod_productos.nombre}}</li>
-    <li>Cantidad {{object.cantidad}}</li>
-    <li>Total de {{object.total_producto}}</li>
-
-    {%if object.comentarios != ""%}
-    <li>{{object.comentarios}}</li>
-    {%else%}
-    <li>No hay comentarios para este producto</li>
-    {%endif%}
-</ul>
-
-<br>
-<a href="{%url 'lista_compra:detail_ldc' id%}">Volver</a>
 {%endblock%}

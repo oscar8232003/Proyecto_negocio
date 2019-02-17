@@ -99,7 +99,7 @@
 
     <!--LISTADO DE LOS PRODUCTOS-->
         <ul class="list-unstyled row mt-small-5 mb-0">
-            {%if productos.exists%}
+            {%if productos %}
                 {% for obj in productos%}
                 <!--El contenedor del prod-->
                 <div class="col-12 col-md-6 p-3" data-aos="zoom-in-right">
@@ -119,10 +119,10 @@
                               <!--Categoria-->
 						    <p class="small text-muted d-none d-sm-block">Categoria: <strong>{{obj.categoria}}</strong></p>
                               <!--Oferta-->
-						    <p class="d-none d-sm-block">Oferta: <strong>{%if obj.oferta%}{{obj.oferta}}{%else%}No hay oferta para este producto{%endif%}</strong></p>
+						    <p class="d-none d-sm-block">Oferta: <strong>{%if obj.oferta%}{{obj.oferta|safe}}{%else%}No hay oferta para este producto{%endif%}</strong></p>
                                 <!--Descripcion-->
                              {%if obj.descripcion%}
-                            <p class="d-none d-sm-block">Descripcion: <strong>{{obj.descripcion}}</strong></p>
+                            <p class="d-none d-sm-block">Descripcion: <strong>{{obj.descripcion|safe}}</strong></p>
                              {%endif%}
 
                             <!--Botones-->
@@ -139,11 +139,31 @@
 					</div>
 				</div>
                 {%endfor%}
+            <div class="col-12 p-4">
+                 <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      {% if productos.has_previous %}
+                        <li class="page-item ">
+                          <a class="page-link" href="?page={{ productos.previous_page_number }}">&laquo;</a>
+                        </li>
+                      {% endif %}
+                      {% for i in productos.paginator.page_range %}
+                        <li class="page-item {% if productos.number == i %}active{% endif %}">
+                          <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                        </li>
+                      {% endfor %}
+                      {% if productos.has_next %}
+                        <li class="page-item ">
+                          <a class="page-link" href="?page={{ productos.next_page_number }}">&raquo;</a>
+                        </li>
+                      {% endif %}
+                    </ul>
+                </nav>
+            </div>
             {%else%}
-            <div class="col-12 text-center p-3">
+            <div class="col-12 text-center p-5">
                 <h3>No se encuentran productos disponibles, aun!</h3>
             </div>
-
             {%endif%}
         </ul>
     </div>

@@ -1,23 +1,119 @@
 {%extends 'core/base.html'%}
 {%block title%}Index{%endblock%}
 {%block content%}
+{%include 'core/slide.html'%}
     <div class="container shadow container-whithe">
         <div class="row">
-            <div class="col-12">
-                <h1>Esto es el index, en maquetacion</h1>
+            <div class="col-12 text-center pt-5 pb-5">
+                <h2><strong>Bienvenido al local de la Sra. Ines</strong></h2>
+                <h5 class="text-muted"><em>Donde siempre tenemos de todo un poco</em></h5>
+                <hr>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12"></div>
+        <div class="row justify-content-around pb-lg-5 mb-lg-5">
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-verde text-center shadow p-3 m-lg-1">
+                <span class="icono" data-icon="y"><h2><strong>titulo</strong></h2></span>
+                <p class="p-3 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Atque distinctio ex iure molestiae odio quae qui quod.
+                </p>
+            </div>
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-celeste text-center shadow p-3 m-lg-1">
+                <span class="icono" data-icon="o"><h2><strong>titulo</strong></h2></span>
+                <p class="p-3 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Atque distinctio ex iure molestiae odio quae qui quod.
+                </p>
+            </div>
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-amarillo text-center shadow p-3 m-lg-1">
+                <span class="icono" data-icon="z"><h2><strong>titulo</strong></h2></span>
+                <p class="p-3 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Atque distinctio ex iure molestiae odio quae qui quod.
+                </p>
+            </div>
         </div>
 
-        <div class="row">
-            <div class="col-12"></div>
+        <div class="row justify-content-end">
+            <div class="col-12 pb-4">
+                <h2>En lo que creemos</h2>
+            </div>
+            <div class="col-xl-12" data-aos="fade-up">
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-4 align-self-center">
+                      <img src="media/core/muestra1.jpeg" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-xl-10 col-lg-11 col-md-11"  data-aos="fade-up">
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-4 align-self-center">
+                      <img src="media/core/muestra1.jpeg" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-9 col-md-10" data-aos="fade-up" >
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-4 align-self-center">
+                      <img src="media/core/muestra1.jpeg" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-7 col-md-9" data-aos="fade-up" >
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-4 align-self-center">
+                      <img src="media/core/muestra1.jpeg" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row">
-            <div class="col-12"></div>
+        <div class="row pb-3">
+            <div class="col-12 p-0">
+               <div class="card bg-dark text-white" style="border-radius:0px; border:0px;">
+                  <img src="media/core/banner/carousel1.jpeg" class="card-img" style="opacity: 0.5; boder-radius:0px;">
+                  <div class="card-img-overlay">
+                    <h2 class="card-title m-0">Card title</h2>
+                    <p class="card-text m-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+            </div>
         </div>
 
     </div>

@@ -4,6 +4,7 @@ from .models import Productos, Categorias, Tipo
 from .form import AgregarProductos, FormCategoria
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 
 
 
@@ -22,9 +23,12 @@ def listar(request):
             else:
                 return HttpResponseRedirect('/productos/list/buscar/' + buscar)
         else:
-            Listado = Productos.objects.all()
+            Listado = Productos.objects.exclude(categoria__nombre = 'Vega')
             form = FormCategoria()
-            return render(request, 'productos/listar.html', {'productos': Listado, 'form': form})
+            paginator = Paginator(Listado, 10)
+            page = request.GET.get('page')
+            Listado_nuevo = paginator.get_page(page)
+            return render(request, 'productos/listar.html', {'productos': Listado_nuevo, 'form': form})
 
 
 """
@@ -52,30 +56,38 @@ class listar(ListView):
         return queryset.filter(nombre__contains = '')
 """
 
-"""" 
+
 #Metodo detail con VBF
 def detail(request, id):
     objeto = get_object_or_404(Productos, pk=id)
-    print(objeto.id)
-    return render(request, 'core/detail.html', {'producto':objeto})
+    precio_estimado=0
+    if objeto:
+        precio_estimado = int(objeto.precio_compra) * 1.3
+    return render(request, 'productos/detail.html', {'object':objeto, 'precio_estimado':int(precio_estimado)})
 """
 #Metodo detail con VBC
 class detail(DetailView):
     model = Productos
     template_name = "productos/detail.html"
-
+"""
 
 #Metodo filtro de categoria con VBF
 def list_categoria(request, categoria):
         objeto = Productos.objects.filter(categoria = categoria)
         form = FormCategoria()
-        return render(request, 'productos/listar.html', {'productos':objeto, 'form':form})
+        paginator = Paginator(objeto, 10)
+        page = request.GET.get('page')
+        Listado_nuevo = paginator.get_page(page)
+        return render(request, 'productos/listar.html', {'productos':Listado_nuevo, 'form':form})
 
 #Metodo filtro de buscar con VBF
 def list_buscar(request, buscar):
         objeto = Productos.objects.filter(nombre__contains = buscar)
         form = FormCategoria()
-        return render(request, 'productos/listar.html', {'productos':objeto, 'form':form})
+        paginator = Paginator(objeto, 10)
+        page = request.GET.get('page')
+        Listado_nuevo = paginator.get_page(page)
+        return render(request, 'productos/listar.html', {'productos':Listado_nuevo, 'form':form})
 
 #Metodo eliminar con VBF
 @login_required(redirect_field_name='login')
