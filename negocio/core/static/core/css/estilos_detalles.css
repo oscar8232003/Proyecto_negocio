@@ -118,11 +118,11 @@
 
         .cuadros{
         border-radius: 100%;
-        transition: all 2s;
+        transition: all 0.3s;
         }
 
         .cuadros:hover{
-        transform: rotateY(360deg);
+        transform: rotate(20deg);
         }
 
         .bc-verde{

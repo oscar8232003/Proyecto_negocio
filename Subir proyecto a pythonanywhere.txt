@@ -87,3 +87,26 @@ y un save, ahora hay que ir al bash y poner un ultimo comando para poder colecta
 -python manage.py collectstatic
 
 y listo tenemos el proyecto andando.
+
+
+
+import os
+
+import sys
+
+#Aqui va la direccion del proyecto
+
+path = os.path.expanduser('~/Proyecto_negocio/negocio')
+
+if path not in sys.path:
+
+    sys.path.insert(0, path)
+
+#Aqui se pone el lugar donde esta el settings
+os.environ['DJANGO_SETTINGS_MODULE'] = 'negocio.settings'
+
+from django.core.wsgi import get_wsgi_application
+
+from django.contrib.staticfiles.handlers import StaticFilesHandler
+
+application = StaticFilesHandler(get_wsgi_application())

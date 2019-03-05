@@ -5,25 +5,9 @@
       <change beforePath="$PROJECT_DIR$/../Subir proyecto a pythonanywhere.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Subir proyecto a pythonanywhere.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/static/core/css/estilos_detalles.css" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/css/estilos_detalles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/static/core/js/validaciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/js/validaciones.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/templates/core/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/quiero_comprar.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/quiero_comprar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/slide.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/slide.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_compra/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lista_compra/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/banner/carousel1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/banner/carousel2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/banner/carousel3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/productos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/templates/productos/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/productos/templates/productos/listar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/productos/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/productos/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos_comprar/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/productos_comprar/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,10 +42,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/templates/core/quiero_comprar.html">
+        <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="89" lean-forward="true" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
+            <state relative-caret-position="476">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/templates/core/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -119,20 +112,20 @@
         <option value="$PROJECT_DIR$/core/templates/core/header.html" />
         <option value="$PROJECT_DIR$/productos/models.py" />
         <option value="$PROJECT_DIR$/cms/processor.py" />
-        <option value="$PROJECT_DIR$/core/static/core/css/estilos_detalles.css" />
         <option value="$PROJECT_DIR$/core/static/core/css/custom_ckeditor.css" />
-        <option value="$PROJECT_DIR$/core/templates/core/base.html" />
         <option value="$PROJECT_DIR$/core/templates/core/slide.html" />
         <option value="$PROJECT_DIR$/cms/models.py" />
         <option value="$PROJECT_DIR$/cms/processors.py" />
         <option value="$PROJECT_DIR$/cms/admin.py" />
         <option value="$PROJECT_DIR$/core/templates/core/quiero_comprar.html" />
-        <option value="$PROJECT_DIR$/core/templates/core/footer.html" />
         <option value="$PROJECT_DIR$/productos/templates/productos/listar.html" />
         <option value="$PROJECT_DIR$/core/templates/core/index.html" />
         <option value="$PROJECT_DIR$/core/views.py" />
         <option value="$PROJECT_DIR$/lista_compra/views.py" />
         <option value="$PROJECT_DIR$/negocio/settings.py" />
+        <option value="$PROJECT_DIR$/core/static/core/css/estilos_detalles.css" />
+        <option value="$PROJECT_DIR$/core/templates/core/footer.html" />
+        <option value="$PROJECT_DIR$/core/templates/core/base.html" />
       </list>
     </option>
   </component>
@@ -156,6 +149,58 @@
           <expand>
             <path>
               <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="negocio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="negocio" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="negocio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="negocio" type="462c0819:PsiDirectoryNode" />
               <item name="negocio" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -445,13 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/css/estilos_detalles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="112" column="58" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/static/core/css/custom_ckeditor.css" />
     <entry file="file://$PROJECT_DIR$/core/templates/core/slide.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -474,13 +512,6 @@
     <entry file="file://$PROJECT_DIR$/registration/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1328">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/registration/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -501,16 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="50" column="22" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,9 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/negocio/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/negocio/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -604,6 +622,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/negocio/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#223#232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/core/quiero_comprar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="33" column="89" lean-forward="true" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/estilos_detalles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="127" column="18" lean-forward="true" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/negocio/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -611,10 +652,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/quiero_comprar.html">
+    <entry file="file://$PROJECT_DIR$/core/templates/core/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="89" lean-forward="true" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
+        <state relative-caret-position="295">
+          <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
