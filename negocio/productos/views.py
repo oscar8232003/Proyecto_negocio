@@ -5,6 +5,7 @@ from .form import AgregarProductos, FormCategoria
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from django.db.models import Q
 
 
 
@@ -15,8 +16,8 @@ def listar(request):
     #print(usuario.tipo)
         if request.method == 'POST':
             categoria = request.POST.get('categoria', None)
+            #obsoleto, cambie la forma de buscar, ahora el form apunta al listar_buscar, por ende no apunta al mismo view de list, pero lo dejo de recordatorio
             buscar = request.POST.get('buscar', None)
-            print(request.POST)
             if categoria is not None:
                 #Otra forma de buscar es no poner la url completa como la de buscar
                 return HttpResponseRedirect('/productos/list/categoria/' + categoria)
@@ -81,13 +82,19 @@ def list_categoria(request, categoria):
         return render(request, 'productos/listar.html', {'productos':Listado_nuevo, 'form':form})
 
 #Metodo filtro de buscar con VBF
-def list_buscar(request, buscar):
-        objeto = Productos.objects.filter(nombre__contains = buscar)
-        form = FormCategoria()
+def list_buscar(request):
+    form = FormCategoria()
+    if request.method == 'POST':
+        buscar = request.POST['buscar']
+        buscar = buscar.strip()
+        objeto = Productos.objects.filter(Q(nombre__contains = buscar) | Q(descripcion__contains = buscar))
         paginator = Paginator(objeto, 10)
         page = request.GET.get('page')
         Listado_nuevo = paginator.get_page(page)
         return render(request, 'productos/listar.html', {'productos':Listado_nuevo, 'form':form})
+    else:
+        return render(request, 'productos/listar.html', {'productos': None, 'form': form})
+
 
 #Metodo eliminar con VBF
 @login_required(redirect_field_name='login')

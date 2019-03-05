@@ -8,13 +8,14 @@ Pillow==5.0.0
 Despues hay que subirlo al repositorio donde esta nuestro proyecto, esto es opcional, se puede digitar tambien las librerias a mano en el hosting.
 
 4° Despues de haber creado la cuenta, nos vamos a console (bash) para poder desplegar nuestro entorno virtual (virtualenv), nos aparece la consola del proyecto, primero que todo hay que digitar:
--mkvirtualenv --python=python3.7 django2
-se creara un entorno virtual de python 3.7 con el nombre de django2, se activara el entorno virtual, para desactivarlo se pone "deactivate" y para poder activaro se pone:
+mkvirtualenv --python=python3.7 django2
+
+se creara un entorno virtual de python 3.7 con el nombre de django2, se activara el entorno virtual, para desactivarlo se pone "deactivate" y para poder activarlo se pone:
 -workon django2
 para ver los paquetes que vienen, puedes utilizar:
 -pip list
 Ahora se deben instalar los paquetes dentro del entorno virtual, ocuparemos el documento que creamos con "requeriments.txt", primero hay que clonar el repositorio con:
--git clone https://github.com/oscar8232003/Proyecto_django_basico.git
+git clone https://github.com/oscar8232003/Proyecto_django_basico.git
 Se empezara a clonar el repositorio y para ver que hay dentro del proyecto se hace un 
 -ls -la
 despues se debe entrar al repositorio clonado con un
@@ -40,12 +41,12 @@ eso se pone dentro de "source code", ahora nos falta configurar el entorno virtu
 -/home/oskar823/.virtualenvs/django2
 Ahora vamos al apartado de "Code" en "WSGI configuration file:" le apretamos y editamos el archivo, borramos todo dentro del archivo y lo reemplazamos por
 
+"""
 import os
 
 import sys
 
 #Aqui va la direccion del proyecto
-
 path = os.path.expanduser('~/Proyecto_django_basico/webpersonal_basica')
 
 if path not in sys.path:
@@ -60,7 +61,7 @@ from django.core.wsgi import get_wsgi_application
 from django.contrib.staticfiles.handlers import StaticFilesHandler
 
 application = StaticFilesHandler(get_wsgi_application())
-
+"""
 
 y listo! tenemos nuestra app corriendo pero debemos arreglar el tema de las direccion de los "static" y los "media"
 
@@ -71,20 +72,18 @@ y en URL y Directory es asi
 
 ahora hay que ir al apartado de files para configurar los static, vamos a buscar el settings.py e iremos hacia abajo en el apartado de static y media, pondremos lo siguiente:
 
-#Archivos estaticos
+#Archivos estaticos, si ya lo tienes no importa
 STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
 
-#Archivos Media
-
+#Archivos Media, si ya lo tienes no importa
 MEDIA_URL = '/media/'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-y un save, aho ra hay que ir al bash y poner un ulitmo comando para poder colectar los archivos staticos
+
+y un save, ahora hay que ir al bash y poner un ultimo comando para poder colectar los archivos staticos
 -python manage.py collectstatic
 
 y listo tenemos el proyecto andando.

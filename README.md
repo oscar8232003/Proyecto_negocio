@@ -1,1 +1,1 @@
-# 1° Proyecto dedicado al local "Sra. Ines", en construccion, falta index y quiero comprar, ademas de incorporarle un cms
+# 1° Proyecto dedicado al local "Sra. Ines", v1.0 

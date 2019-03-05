@@ -6,6 +6,16 @@
 					<div class="col-12 col-sm-4 mt-4 mb-3 text-center ">
 						<h4 class="TITULO">Sra. Ines</h4>
 						<hr>
+						{%if footer is not None%}
+						<h6 data-icon="h"> Dirección</h6>
+						<p> {{footer.direccion}}</p>
+						<hr>
+						<h6 data-icon="a"> Contacto</h6>
+						<p> {{footer.contacto}}</p>
+						<hr>
+						<h6 data-icon="c"> Email de contacto</h6>
+						<p> {{footer.email}}</p>
+						{%else%}
 						<h6 data-icon="h"> Dirección</h6>
 						<p>Jose Miguel Carrera 1997, Macul</p>
 						<hr>
@@ -14,6 +24,20 @@
 						<hr>
 						<h6 data-icon="c"> Email de contacto</h6>
 						<p> oavr.18@gmail.com</p>
+						{%endif%}
+
+						<!--BOTON EDITAR-->
+						{%if request.session.tipo == 'Administrador' and footer is not None%}
+							<div class="col-12 mb-3">
+								<a href="{%url 'admin:cms_footer_change' footer.id%}" class="btn btn-info">Editar Footer</a>
+							</div>
+						{%elif request.session.tipo == 'Administrador' and footer is None%}
+							<div class="col-12 mb-3">
+								<a href="{%url 'admin:cms_footer_changelist'%}" class="btn btn-info">Editar Footer</a>
+							</div>
+						{%endif%}
+						<!--FIN DE BOTON EDITAR-->
+
 					</div>
 					<!--REDES SOCIALES-->
 					<div class="col-12 col-sm-4 mt-4 mb-4 text-center">

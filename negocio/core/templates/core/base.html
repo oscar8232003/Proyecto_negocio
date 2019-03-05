@@ -8,6 +8,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="theme-color" content="#222">
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135467890-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-135467890-1');
+	</script>
+
 	<!--ICONO-->
 	<link rel="shortcut icon" href="/media/core/ico.ico" />
 	<!--BOOTSTRAP 4-->
@@ -30,6 +40,41 @@
 	<link rel="stylesheet" href="{% static 'core/css/estilos_detalles.css' %}">
 
 	<title>{%block title%}{%endblock%}</title>
+
+	<!--=====================================
+	Marcado HTML5
+	======================================-->
+
+	<meta name="title" content="Sra Ines - Verduleria, Fruteria y Abarrotes, de todo un poco">
+
+	<meta name="description" content="El almacen de la señora Ines es el lugar indicado en donde puedes comprar verduras y frutas de temporada a un muy buen precio sin perder su calidad.">
+
+
+
+	<!--=====================================
+	Marcado de Open Graph FACEBOOK
+	======================================
+
+	<meta property="og:title"   content="<?php echo $cabeceras['titulo'];?>">
+	<meta property="og:url" content="<?php echo $url.$cabeceras['ruta'];?>">
+	<meta property="og:description" content="<?php echo $cabeceras['descripcion'];?>">
+	<meta property="og:image"  content="<?php echo $servidor.$cabeceras['portada'];?>">
+	<meta property="og:type"  content="website">
+	<meta property="og:site_name" content="Sra Ines">
+	<meta property="og:locale" content="es_CH">
+	-->
+
+	<!--=====================================
+	Marcado para DATOS ESTRUCTURADOS GOOGLE
+	======================================
+
+	<meta itemprop="name" content="<?php echo $cabeceras['titulo'];?>">
+	<meta itemprop="url" content="<?php echo $url.$cabeceras['ruta'];?>">
+	<meta itemprop="description" content="<?php echo $cabeceras['descripcion'];?>">
+	<meta itemprop="image" content="<?php echo $servidor.$cabeceras['portada'];?>">
+	<title><?php echo  $cabeceras['titulo']; ?></title>
+
+	-->
 </head>
 <body>
 	<div class="loader"></div>

@@ -4,10 +4,27 @@
 <div class="container shadow container-whithe">
     <div class="row">
         <div class="col-12 text-center p-4">
+            {%if productos_list is not None%}
+            <h1>{{productos_list.titulo_list}}</h1>
+            <p><strong>{{productos_list.subtitulo_list}}</strong></p>
+            {%else%}
             <h1>Productos</h1>
             <p><strong>Aqui encontraras un listado de la mayoria de los productos que se encuentran en venta en el local, esto no quiere decir que sean todo, cada vez tenemos aun mas.</strong></p>
+            {%endif%}
             <hr>
         </div>
+        <!--FIN DE BOTON EDITAR-->
+        {%if request.session.tipo == 'Administrador' and productos_list is not None%}
+        <div class="col-12 mb-3">
+            <a href="{%url 'admin:cms_productos_list_change' productos_list.id%}" class="btn btn-info">Editar Titulo</a>
+        </div>
+        {%elif request.session.tipo == 'Administrador' and productos_list is None%}
+        <div class="col-12 mb-3">
+            <a href="{%url 'admin:cms_productos_list_changelist'%}" class="btn btn-info">Editar Titulo</a>
+        </div>
+        {%endif%}
+        <!--BOTON EDITAR-->
+
         <div class="col-12 mb-3">
             {%if request.user.id is not None and request.session.tipo == 'Interno' or request.session.tipo == 'Administrador'%}
                 <a href="{%url 'productos:agregar'%}" class="btn btn-success"><span data-icon="v"></span> Agregar producto</a>
@@ -16,8 +33,8 @@
         </div>
     </div>
 
-    <div class="row text-center">
-         <form action="{% url 'productos:list'%}" method="post" class="col-6 col-md-4" onsubmit="return validar_buscar();">
+    <div class="row text-center pb-3">
+         <form action="{% url 'productos:list_buscar'%}" method="POST" class="col-6 col-md-4" onsubmit="return validar_buscar();">
             {%csrf_token%}
              <div>
                 <input type="text" name="buscar" class="form-control" placeholder="ejem. arroz aruba" id="buscar_producto">
@@ -122,7 +139,7 @@
 						    <p class="d-none d-sm-block">Oferta: <strong>{%if obj.oferta%}{{obj.oferta|safe}}{%else%}No hay oferta para este producto{%endif%}</strong></p>
                                 <!--Descripcion-->
                              {%if obj.descripcion%}
-                            <p class="d-none d-sm-block">Descripcion: <strong>{{obj.descripcion|safe}}</strong></p>
+                            <p class="d-none d-sm-block">Descripcion: <strong>{{obj.descripcion|truncatechars:90}}</strong></p>
                              {%endif%}
 
                             <!--Botones-->
@@ -166,5 +183,12 @@
             </div>
             {%endif%}
         </ul>
+    {%if 'buscar' in request.path or 'categoria' in request.path%}
+        <div class="row pb-4">
+            <div class="col-12">
+                <a href="{%url 'productos:list'%}" class="btn btn-secondary "><span data-icon="x"></span> Volver</a>
+            </div>
+        </div>
+    {%endif%}
     </div>
 {%endblock%}

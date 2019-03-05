@@ -18,4 +18,4 @@ class Productos_Comprar_Model(models.Model):
         db_table = "Productos_Comprar"
 
     def __str__(self):
-        return "{}, {} {}".format(self.cod_productos.nombre, self.cantidad, self.cod_productos.unidad_medida.medida)
+        return "{}, ${} por {}".format(self.cod_productos.nombre, self.cod_productos.precio_compra, self.cod_productos.unidad_medida.medida)

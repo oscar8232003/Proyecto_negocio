@@ -1,52 +1,115 @@
 {%extends 'core/base.html'%}
-{%block title%}Index{%endblock%}
+{%block title%}Inicio{%endblock%}
 {%block content%}
 {%include 'core/slide.html'%}
     <div class="container shadow container-whithe">
         <div class="row">
+         <!--BOTON EDITAR-->
+        {%if request.session.tipo == 'Administrador' and Banners is not None%}
+            <div class="col-12 mt-3">
+                <a href="{%url 'admin:cms_inicio_banner_change' Banners.id%}" class="btn btn-info">Editar Banner</a>
+            </div>
+        {%elif request.session.tipo == 'Administrador' and Banners is None%}
+            <div class="col-12 mt-3">
+                <a href="{%url 'admin:cms_inicio_banner_changelist'%}" class="btn btn-info">Editar Banner</a>
+            </div>
+        {%endif%}
+        <!--FIN DE BOTON EDITAR-->
+
             <div class="col-12 text-center pt-5 pb-5">
+                {%if Titulo is not None%}
+                <h2><strong>{{Titulo.titulo_principal}}</strong></h2>
+                <h5 class="text-muted pb-4"><em>{{Titulo.subtitulo_principal}}</em></h5>
+                {%else%}
                 <h2><strong>Bienvenido al local de la Sra. Ines</strong></h2>
-                <h5 class="text-muted"><em>Donde siempre tenemos de todo un poco</em></h5>
+                <h5 class="text-muted pb-4"><em>"Donde siempre tenemos de todo un poco"</em></h5>
+                {%endif%}
+                <!--BOTON EDITAR-->
+                {%if request.session.tipo == 'Administrador'%}
+                    <div class="col-12 mt-1">
+                        <a href="{%url 'admin:cms_inicio_titulo_change' Titulo.id%}" class="btn btn-info">Editar Titulo</a>
+                    </div>
+                {%endif%}
+                <!--FIN DE BOTON EDITAR-->
                 <hr>
             </div>
+
         </div>
 
         <div class="row justify-content-around pb-lg-5 mb-lg-5">
+            <!--BOTON EDITAR-->
+            {%if request.session.tipo == 'Administrador' and Circulos is not None%}
+                <div class="col-12 mb-3 d-none d-lg-block">
+                    <a href="{%url 'admin:cms_inicio_circulos_change' Circulos.id%}" class="btn btn-info">Editar Circulos</a>
+                </div>
+            {%elif request.session.tipo == 'Administrador' and Circulos is None%}
+                <div class="col-12 mb-3 d-none d-lg-block">
+                    <a href="{%url 'admin:cms_inicio_circulos_changelist'%}" class="btn btn-info">Editar Circulos</a>
+                </div>
+            {%endif%}
+            <!--FIN DE BOTON EDITAR-->
+
+            <!--SECCION DE LOS CIRCULOS-->
+            {%if Circulos is not None%}
             <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-verde text-center shadow p-3 m-lg-1">
-                <span class="icono" data-icon="y"><h2><strong>titulo</strong></h2></span>
-                <p class="p-3 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Atque distinctio ex iure molestiae odio quae qui quod.
-                </p>
+                <span class="icono" data-icon="y"><h2><strong>{{Circulos.circulo1_titulo}}</strong></h2></span>
+                <p class="p-3 m-0">{{Circulos.circulo1_contenido|safe}}</p>
             </div>
             <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-celeste text-center shadow p-3 m-lg-1">
-                <span class="icono" data-icon="o"><h2><strong>titulo</strong></h2></span>
-                <p class="p-3 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Atque distinctio ex iure molestiae odio quae qui quod.
-                </p>
+                <span class="icono" data-icon="o"><h2><strong>{{Circulos.circulo2_titulo}}</strong></h2></span>
+                <p class="p-3 m-0">{{Circulos.circulo2_contenido|safe}}</p>
             </div>
             <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-amarillo text-center shadow p-3 m-lg-1">
-                <span class="icono" data-icon="z"><h2><strong>titulo</strong></h2></span>
-                <p class="p-3 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Atque distinctio ex iure molestiae odio quae qui quod.
-                </p>
+                <span class="icono" data-icon="z"><h2><strong>{{Circulos.circulo3_titulo}}</strong></h2></span>
+                <p class="p-3 m-0">{{Circulos.circulo3_contenido|safe}}</p>
             </div>
+
+            {%else%}
+
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-verde text-center shadow p-3 m-lg-1">
+                <span class="icono" data-icon="y"><h2><strong>Siempre fresco</strong></h2></span>
+                <p class="p-3 m-0"></p>
+            </div>
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-celeste text-center shadow p-3 m-lg-1">
+                <span class="icono" data-icon="o"><h2><strong>Mejores Precios</strong></h2></span>
+                <p class="p-3 m-0"></p>
+            </div>
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-amarillo text-center shadow p-3 m-lg-1">
+                <span class="icono" data-icon="z"><h2><strong>Calidad</strong></h2></span>
+                <p class="p-3 m-0"></p>
+            </div>
+            {%endif%}
+            <!--FIN SECCION DE LOS CIRCULOS-->
         </div>
 
+        <!--SECCION DE LAS CARDS-->
         <div class="row justify-content-end">
-            <div class="col-12 pb-4">
-                <h2>En lo que creemos</h2>
+            <!--BOTON EDITAR-->
+            {%if request.session.tipo == 'Administrador' and Cards is not None%}
+                <div class="col-12 mb-3">
+                    <a href="{%url 'admin:cms_inicio_cards_change' Cards.id%}" class="btn btn-info">Editar Cards</a>
+                </div>
+            {%elif request.session.tipo == 'Administrador' and Cards is None%}
+                <div class="col-12 mb-3">
+                    <a href="{%url 'admin:cms_inicio_cards_changelist'%}" class="btn btn-info">Editar Cards</a>
+                </div>
+            {%endif%}
+            <!--FIN DE BOTON EDITAR-->
+
+            {%if Cards is not None%}
+            <div class="col-12 pb-5">
+                <h2><strong>{{Cards.titulo_cards}}</strong></h2>
             </div>
             <div class="col-xl-12" data-aos="fade-up">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 shadow-sm" style="max-width: 570px;">
                   <div class="row no-gutters">
-                    <div class="col-md-4 align-self-center">
-                      <img src="media/core/muestra1.jpeg" class="card-img">
+                    <div class="col-md-6 align-self-center p-md-3">
+                      <img src="media/{{Cards.img_card1}}" class="card-img img-fluid">
                     </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="col-md-6">
+                      <div class="card-body p-md-3">
+                        <h5 class="card-title"><strong>{{Cards.titulo_card1}}</strong></h5>
+                        <p class="card-text">{{Cards.contenido_card1|safe}}</p>
                       </div>
                     </div>
                   </div>
@@ -54,49 +117,46 @@
             </div>
 
             <div class="col-xl-10 col-lg-11 col-md-11"  data-aos="fade-up">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 shadow-sm" style="max-width: 570px;">
                   <div class="row no-gutters">
-                    <div class="col-md-4 align-self-center">
-                      <img src="media/core/muestra1.jpeg" class="card-img">
+                    <div class="col-md-6 align-self-center p-md-3">
+                      <img src="media/{{Cards.img_card2}}" class="card-img img-fluid">
                     </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="col-md-6">
+                      <div class="card-body p-md-3">
+                        <h5 class="card-title"><strong>{{Cards.titulo_card2}}</strong></h5>
+                        <p class="card-text">{{Cards.contenido_card2|safe}}</p>
                       </div>
                     </div>
                   </div>
                 </div>
             </div>
             <div class="col-xl-8 col-lg-9 col-md-10" data-aos="fade-up" >
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 shadow-sm" style="max-width: 570px;">
                   <div class="row no-gutters">
-                    <div class="col-md-4 align-self-center">
-                      <img src="media/core/muestra1.jpeg" class="card-img">
+                    <div class="col-md-6 align-self-center p-md-3">
+                      <img src="media/{{Cards.img_card3}}" class="card-img img-fluid">
                     </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="col-md-6">
+                      <div class="card-body p-md-3">
+                        <h5 class="card-title"><strong>{{Cards.titulo_card3}}</strong></h5>
+                        <p class="card-text">{{Cards.contenido_card3|safe}}</p>
                       </div>
                     </div>
                   </div>
                 </div>
             </div>
 
-            <div class="col-xl-6 col-lg-7 col-md-9" data-aos="fade-up" >
-                <div class="card mb-3" style="max-width: 540px;">
+            <div class="col-xl-6 col-lg-7 col-md-9 pb-5" data-aos="fade-up" >
+                <div class="card mb-3 shadow-sm" style="max-width: 570px;">
                   <div class="row no-gutters">
-                    <div class="col-md-4 align-self-center">
-                      <img src="media/core/muestra1.jpeg" class="card-img">
+                    <div class="col-md-6 align-self-center p-md-3">
+                      <img src="media/{{Cards.img_card4}}" class="card-img img-fluid">
                     </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="col-md-6">
+                      <div class="card-body p-md-3">
+                        <h5 class="card-title"><strong>{{Cards.titulo_card4}}</strong></h5>
+                        <p class="card-text">{{Cards.contenido_card4|safe}}</p>
                       </div>
                     </div>
                   </div>
@@ -104,17 +164,112 @@
             </div>
         </div>
 
-        <div class="row pb-3">
+        {%else%}
+        <div class="col-12 pb-5">
+                <h2><strong>Nosotros creemos en</strong></h2>
+            </div>
+            <div class="col-xl-12" data-aos="fade-up">
+                <div class="card mb-3 shadow-sm" style="max-width: 570px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-6 align-self-center p-md-3">
+                      <img src="media/core/index/muestra1.jpg" class="card-img img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body p-md-3">
+                        <h5 class="card-title"><strong>Card title</strong></h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-xl-10 col-lg-11 col-md-11"  data-aos="fade-up">
+                <div class="card mb-3 shadow-sm" style="max-width: 570px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-6 align-self-center p-md-3">
+                      <img src="media/core/index/muestra2.jpg" class="card-img img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body p-md-3">
+                        <h5 class="card-title"><strong>Card title</strong></h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-9 col-md-10" data-aos="fade-up" >
+                <div class="card mb-3 shadow-sm" style="max-width: 570px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-6 align-self-center p-md-3">
+                      <img src="media/core/index/muestra3.jpg" class="card-img img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body p-md-3">
+                        <h5 class="card-title"><strong>Card title</strong></h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-7 col-md-9 pb-5" data-aos="fade-up" >
+                <div class="card mb-3 shadow-sm" style="max-width: 570px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-6 align-self-center p-md-3">
+                      <img src="media/core/index/muestra4.png" class="card-img img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body p-md-3">
+                        <h5 class="card-title"><strong>Card title</strong></h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        {%endif%}
+        <!--FIN SECCION DE LAS CARDS-->
+
+
+         <!--SECCION DE LA IMAGEN FINAL-->
+        <div class="row">
+            <!--SECCION DE BOTON EDITAR-->
+            {%if request.session.tipo == 'Administrador' and Foto_final is not None%}
+                <div class="col-12 mb-3">
+                    <a href="{%url 'admin:cms_inicio_foto_final_change' Foto_final.id%}" class="btn btn-info">Editar Foto</a>
+                </div>
+            {%elif request.session.tipo == 'Administrador' and Foto_final is None%}
+                <div class="col-12 mb-3">
+                    <a href="{%url 'admin:cms_inicio_foto_final_changelist'%}" class="btn btn-info">Editar Foto</a>
+                </div>
+            {%endif%}
+            <!--FIN DE BOTON EDITAR-->
             <div class="col-12 p-0">
+                {%if Foto_final is not None%}
                <div class="card bg-dark text-white" style="border-radius:0px; border:0px;">
-                  <img src="media/core/banner/carousel1.jpeg" class="card-img" style="opacity: 0.5; boder-radius:0px;">
+                  <img src="media/{{Foto_final.img_foto_final}}" class="card-img" style="opacity: 0.5; boder-radius:0px;">
+                  <div class="card-img-overlay">
+                    <h2 class="card-title m-0">{{Foto_final.titulo_foto_final}}</h2>
+                    <p class="card-text m-0">{{Foto_final.contenido_foto_final|safe}}</p>
+                  </div>
+                </div>
+                {%else%}
+                <div class="card bg-dark text-white" style="border-radius:0px; border:0px;">
+                  <img src="media/core/index/imb-botom.JPG" class="card-img" style="opacity: 0.5; boder-radius:0px;">
                   <div class="card-img-overlay">
                     <h2 class="card-title m-0">Card title</h2>
                     <p class="card-text m-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   </div>
                 </div>
+                {%endif%}
             </div>
         </div>
+        <!--FIN SECCION DE LA IMAGEN FINAL-->
 
     </div>
 {%endblock%}

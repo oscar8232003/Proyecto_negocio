@@ -49,7 +49,7 @@ class Productos(models.Model):
 
     #Este es para que valor se muestre en la lista, sino semuestra un objects Productos(1)
     def __str__(self):
-        return "{}, {}".format(self.nombre, self.descripcion)
+        return "{}".format(self.nombre)
 
 
 class Tipo(models.Model):

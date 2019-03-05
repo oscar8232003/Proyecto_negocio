@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from productos.models import Tipo
 
+"""
+FUNCION INDEX, LA CUAL SE ENCARGA DE VERIFICAR SI EL USUARIO ESTA REGISTRADO, SI ES ASI BUSCA EN LA TABLA TIPO PARA ASIGNARLE SU TIPO DE USUARIO,
+ESTE LO ASIGNA A LA SESION "TIPO" SINO ESTE TIENE POR DEFECTO LA SESSION "NONE".
 
-# Create your views here.
+
+
+"""
+
 
 def index(request):
 

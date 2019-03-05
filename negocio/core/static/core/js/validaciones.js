@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function validar_nombre(){
 	var nombre = document.getElementById("id_nombre");
-	var regex_nombre = /^\w{1,20}(\s\w{1,20})*$/;
+    var regex_nombre = /^\w{1,20}(\s\w{1,20})*$/;
 	var span_nombre = document.getElementById("id_nombre-invalid");
 	nombre.classList.remove("is-valid");
 	nombre.classList.remove("is-invalid");
@@ -12,13 +12,13 @@ function validar_nombre(){
 			nombre.classList.add("is-valid");
 			return true;
 		}else{
-			span_nombre.innerHTML="Ingrese un nombre valido";
+			span_nombre.innerHTML="Ingrese un nombre valido, sin espacios al principio/final";
 			nombre.classList.add("is-invalid");
 			nombre.focus();
 			return false;
 		}
 	}else{
-		span_nombre.innerHTML="Por favor rellene el campo en blanco.";
+		span_nombre.innerHTML="Por favor rellene el campo vacio";
 		nombre.classList.add("is-invalid");
 		nombre.focus();
 		return false;

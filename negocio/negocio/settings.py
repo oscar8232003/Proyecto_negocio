@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     'productos',
     'core',
+    'cms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'lista_compra.apps.ListaCompraConfig',
     'registration',
+    'ckeditor',
     'productos_comprar.apps.ProductosComprarConfig',
 
 ]
@@ -71,6 +73,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'productos.processors.Traer_Categorias',
+                'cms.processors.Traer_Banner',
             ],
         },
     },
@@ -132,6 +135,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+
 #Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -139,6 +143,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 LOGOUT_REDIRECT_URL = 'core:index'
 LOGIN_REDIRECT_URL = 'core:index'
 
+
+
+"""
+ESTA SECCION PERTENECE A LA CONFIGURACION PARA EL ENVIO DE EMAIL POR MAILTRAP
+"""
 #Configuracion de mailtrap.io
 EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = '74e6a2b47de68a'
@@ -154,3 +163,19 @@ else:
     #aqui hay que configurar un email real para producuccion
     pass
 """
+
+
+"""
+CONFIGURACION PARA LA APP DE CKEDITOR PARA DJANGO
+"""
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'width': 'auto',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink']
+        ]
+    }
+}
