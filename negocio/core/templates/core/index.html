@@ -53,15 +53,15 @@
             {%if Circulos is not None%}
             <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-verde text-center shadow p-3 m-lg-1">
                 <span class="icono" data-icon="y"><h2><strong>{{Circulos.circulo1_titulo}}</strong></h2></span>
-                <p class="p-3 m-0">{{Circulos.circulo1_contenido|safe}}</p>
+                {{Circulos.circulo1_contenido|safe}}
             </div>
             <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-celeste text-center shadow p-3 m-lg-1">
                 <span class="icono" data-icon="o"><h2><strong>{{Circulos.circulo2_titulo}}</strong></h2></span>
-                <p class="p-3 m-0">{{Circulos.circulo2_contenido|safe}}</p>
+                {{Circulos.circulo2_contenido|safe}}
             </div>
             <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-amarillo text-center shadow p-3 m-lg-1">
                 <span class="icono" data-icon="z"><h2><strong>{{Circulos.circulo3_titulo}}</strong></h2></span>
-                <p class="p-3 m-0">{{Circulos.circulo3_contenido|safe}}</p>
+                {{Circulos.circulo3_contenido|safe}}
             </div>
 
             {%else%}
@@ -109,7 +109,7 @@
                     <div class="col-md-6">
                       <div class="card-body p-md-3">
                         <h5 class="card-title"><strong>{{Cards.titulo_card1}}</strong></h5>
-                        <p class="card-text">{{Cards.contenido_card1|safe}}</p>
+                        {{Cards.contenido_card1|safe}}
                       </div>
                     </div>
                   </div>
@@ -125,7 +125,7 @@
                     <div class="col-md-6">
                       <div class="card-body p-md-3">
                         <h5 class="card-title"><strong>{{Cards.titulo_card2}}</strong></h5>
-                        <p class="card-text">{{Cards.contenido_card2|safe}}</p>
+                        {{Cards.contenido_card2|safe}}
                       </div>
                     </div>
                   </div>
@@ -140,7 +140,7 @@
                     <div class="col-md-6">
                       <div class="card-body p-md-3">
                         <h5 class="card-title"><strong>{{Cards.titulo_card3}}</strong></h5>
-                        <p class="card-text">{{Cards.contenido_card3|safe}}</p>
+                        {{Cards.contenido_card3|safe}}
                       </div>
                     </div>
                   </div>
@@ -156,7 +156,7 @@
                     <div class="col-md-6">
                       <div class="card-body p-md-3">
                         <h5 class="card-title"><strong>{{Cards.titulo_card4}}</strong></h5>
-                        <p class="card-text">{{Cards.contenido_card4|safe}}</p>
+                        {{Cards.contenido_card4|safe}}
                       </div>
                     </div>
                   </div>
