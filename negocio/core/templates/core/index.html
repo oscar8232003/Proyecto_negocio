@@ -51,32 +51,49 @@
 
             <!--SECCION DE LOS CIRCULOS-->
             {%if Circulos is not None%}
-            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-verde text-center shadow p-3 m-lg-1">
-                <span class="icono" data-icon="y"><h2><strong>{{Circulos.circulo1_titulo}}</strong></h2></span>
+
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 card text-white bg-primary text-center cuadros">
+              <div class="card-body">
+                <span class="icono card-title" data-icon="y"><h2><strong>{{Circulos.circulo1_titulo}}</strong></h2></span>
                 {{Circulos.circulo1_contenido|safe}}
+              </div>
             </div>
-            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-celeste text-center shadow p-3 m-lg-1">
-                <span class="icono" data-icon="o"><h2><strong>{{Circulos.circulo2_titulo}}</strong></h2></span>
+
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 card text-white bg-info text-center cuadros">
+              <div class="card-body">
+                <span class="icono card-title" data-icon="o"><h2><strong>{{Circulos.circulo2_titulo}}</strong></h2></span>
                 {{Circulos.circulo2_contenido|safe}}
+              </div>
             </div>
-            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-amarillo text-center shadow p-3 m-lg-1">
-                <span class="icono" data-icon="z"><h2><strong>{{Circulos.circulo3_titulo}}</strong></h2></span>
+
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 card text-white bg-success text-center cuadros">
+              <div class="card-body">
+                <span class="icono card-title" data-icon="z"><h2><strong>{{Circulos.circulo3_titulo}}</strong></h2></span>
                 {{Circulos.circulo3_contenido|safe}}
+              </div>
             </div>
 
             {%else%}
 
-            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-verde text-center shadow p-3 m-lg-1">
-                <span class="icono" data-icon="y"><h2><strong>Siempre fresco</strong></h2></span>
-                <p class="p-3 m-0"></p>
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 card text-white bg-primary text-center cuadros">
+              <div class="card-body">
+                <span class="icono card-title" data-icon="y"><h2><strong>Siempre Fresco</strong></h2></span>
+                <p>Nuestros productos no pasan de tener 2 dias de duracion, por ende siempre le tenemos los productos mas frescos!</p>
+              </div>
             </div>
-            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-celeste text-center shadow p-3 m-lg-1">
-                <span class="icono" data-icon="o"><h2><strong>Mejores Precios</strong></h2></span>
-                <p class="p-3 m-0"></p>
+
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 card text-white bg-info text-center cuadros">
+              <div class="card-body">
+                <span class="icono card-title" data-icon="o"><h2><strong>Mejores Precios</strong></h2></span>
+                <p>Nosotros nos aseguramos que el producto este al alcanze de su bolsillo.</p>
+              </div>
             </div>
-            <div class="d-none d-lg-block col-lg-4 col-xl-3 cuadros bc-amarillo text-center shadow p-3 m-lg-1">
-                <span class="icono" data-icon="z"><h2><strong>Calidad</strong></h2></span>
-                <p class="p-3 m-0"></p>
+
+            <div class="d-none d-lg-block col-lg-4 col-xl-3 card text-white bg-success text-center cuadros">
+              <div class="card-body">
+                <span class="icono card-title" data-icon="z"><h2><strong>Buena Calidad</strong></h2></span>
+                <p>Siempre preferimos la calidad ante todo, sabemos que hacer la diferencia es por lo que nos prefieren!</p>
+              </div>
             </div>
             {%endif%}
             <!--FIN SECCION DE LOS CIRCULOS-->
