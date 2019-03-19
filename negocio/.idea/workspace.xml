@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5c80c30-ef0a-46fd-b426-be9f68a09540" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/core/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_compra/templates/lista_compra/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/lista_compra/templates/lista_compra/listar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/banner/carousel1.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/banner/carousel1.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/banner/carousel2.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/banner/carousel2.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/banner/carousel3.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/banner/carousel3.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/index/imb-botom.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/index/imb-botom.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/index/muestra1.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/index/muestra1.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/index/muestra2.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/index/muestra2.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/core/index/muestra3.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/index/muestra3.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/core/slide.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/slide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/core/banner/carousel1.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/banner/carousel_1.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/core/banner/carousel2.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/banner/carousel_2.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/core/banner/carousel3.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/core/banner/carousel_3.JPG" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+            <state relative-caret-position="595">
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -39,17 +31,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/negocio/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
+            <state relative-caret-position="629">
               <caret line="43" column="82" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lista_compra/templates/lista_compra/listar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="138" column="22" lean-forward="true" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
+            <state relative-caret-position="1052">
+              <caret line="138" column="22" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/templates/core/slide.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="69" lean-forward="true" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,15 +125,15 @@
         <option value="$PROJECT_DIR$/negocio/settings.py" />
         <option value="$PROJECT_DIR$/core/templates/core/footer.html" />
         <option value="$PROJECT_DIR$/core/templates/core/quiero_comprar.html" />
-        <option value="$PROJECT_DIR$/core/templates/core/slide.html" />
         <option value="$PROJECT_DIR$/core/static/core/css/estilos_detalles.css" />
         <option value="$PROJECT_DIR$/core/templates/core/base.html" />
         <option value="$PROJECT_DIR$/core/templates/core/index.html" />
         <option value="$PROJECT_DIR$/lista_compra/templates/lista_compra/listar.html" />
+        <option value="$PROJECT_DIR$/core/templates/core/slide.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="359" />
     <option name="y" value="20" />
     <option name="width" value="1435" />
@@ -138,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,6 +266,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,8 +331,8 @@
       <window_info id="Favorites" order="0" sideWeight="0.5008183" side_tool="true" weight="0.21081081" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49918166" visible="true" weight="0.16750179" />
       <window_info id="Structure" order="2" sideWeight="0.5008183" side_tool="true" weight="0.21081081" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.63063705" visible="true" weight="0.3198032" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.36936292" side_tool="true" visible="true" weight="0.3198032" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.62992126" visible="true" weight="0.3198032" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.37007874" side_tool="true" visible="true" weight="0.3198032" />
       <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.4996421" weight="0.3280098" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
@@ -354,9 +363,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/media/core/banner/quiero_comprar3.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/core/banner/quiero_comprar2.jpeg" />
     <entry file="file://$PROJECT_DIR$/media/core/404.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -458,9 +464,6 @@
       </provider>
     </entry>
     <entry file="file://F:/Cursos/DJANGO/Desarrollo Web con Python usando Django  para Principiantes/20. Clases Extras/proyecto/cursodj/cursodj/wsgi.py" />
-    <entry file="file://$PROJECT_DIR$/media/core/banner/carousel2.JPG">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/static/core/css/estilos_base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-594">
@@ -625,24 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/core/banner/carousel1.JPG">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/slide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productos/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -673,13 +658,6 @@
     <entry file="file://$PROJECT_DIR$/core/static/core/css/iconos.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/core/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -695,17 +673,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/negocio/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
+        <state relative-caret-position="629">
           <caret line="43" column="82" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/media/core/banner/carousel_2.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/core/banner/carousel_3.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/core/banner/carousel_1.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/lista_compra/templates/lista_compra/listar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="138" column="22" lean-forward="true" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
+        <state relative-caret-position="1052">
+          <caret line="138" column="22" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/core/slide.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="69" lean-forward="true" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
